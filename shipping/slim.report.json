@@ -1,0 +1,414 @@
+{
+  "version": "1.0",
+  "engine": "linux|Transformer|1.36.4|8e0e0a59720bb95c708c046cf9ec71b4939803da|2021-09-07_08:07:15AM",
+  "containerized": false,
+  "host_distro": {
+    "name": "Ubuntu",
+    "version": "18.04",
+    "display_name": "Ubuntu 18.04.5 LTS"
+  },
+  "type": "build",
+  "state": "done",
+  "target_reference": "weaveworksdemos/shipping:0.4.8",
+  "system": {
+    "type": "Linux",
+    "release": "4.15.0-156-generic",
+    "distro": {
+      "name": "Alpine Linux",
+      "version": "3.4.6",
+      "display_name": "Alpine Linux v3.4"
+    }
+  },
+  "source_image": {
+    "identity": {
+      "id": "sha256:4fc533e8180ac3805582d3b2a9f8008d54d346211894d6131d92a82d17ee5458",
+      "tags": [
+        "0.4.8"
+      ],
+      "names": [
+        "weaveworksdemos/shipping:0.4.8"
+      ],
+      "digests": [
+        "sha256:983305c948fded487f4a4acdeab5f898e89d577b4bc1ca3de7750076469ccad4"
+      ],
+      "full_digests": [
+        "weaveworksdemos/shipping@sha256:983305c948fded487f4a4acdeab5f898e89d577b4bc1ca3de7750076469ccad4"
+      ]
+    },
+    "size": 198611718,
+    "size_human": "199 MB",
+    "create_time": "2017-03-16T14:52:32Z",
+    "docker_version": "1.12.3",
+    "architecture": "amd64",
+    "user": "myuser",
+    "os": "linux",
+    "labels": {
+      "org.label-schema.build-date": "2017-03-16T14:50:24+0000",
+      "org.label-schema.description": "REST API for Shipping service",
+      "org.label-schema.name": "Socks Shop: Shipping",
+      "org.label-schema.schema-version": "1.0",
+      "org.label-schema.url": "https://github.com/microservices-demo/shipping",
+      "org.label-schema.vcs-ref": "c3bc9015fdbfce1265370502c4fd19b45120550e",
+      "org.label-schema.vcs-url": "github.com:microservices-demo/shipping.git",
+      "org.label-schema.vendor": "Weaveworks",
+      "org.label-schema.version": "0.0.2-SNAPSHOT"
+    },
+    "env_vars": [
+      "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1.8-openjdk/bin",
+      "LANG=C.UTF-8",
+      "JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk",
+      "JAVA_VERSION=8u111",
+      "JAVA_ALPINE_VERSION=8.111.14-r0",
+      "SERVICE_USER=myuser",
+      "SERVICE_UID=10001",
+      "SERVICE_GROUP=mygroup",
+      "SERVICE_GID=10001",
+      "JAVA_OPTS=-Djava.security.egd=file:/dev/urandom"
+    ],
+    "container_entry": {
+      "exe_path": ""
+    }
+  },
+  "minified_image_size": 117534148,
+  "minified_image_size_human": "118 MB",
+  "minified_image": "weaveworksdemos/shipping.slim",
+  "minified_image_has_data": true,
+  "minified_by": 1.6898213955658232,
+  "artifact_location": "/tmp/docker-slim-state/.docker-slim-state/images/4fc533e8180ac3805582d3b2a9f8008d54d346211894d6131d92a82d17ee5458/artifacts",
+  "container_report_name": "creport.json",
+  "seccomp_profile_name": "weaveworksdemos-shipping-seccomp.json",
+  "apparmor_profile_name": "weaveworksdemos-shipping-apparmor-profile",
+  "image_stack": [
+    {
+      "is_top_image": true,
+      "id": "sha256:4fc533e8180ac3805582d3b2a9f8008d54d346211894d6131d92a82d17ee5458",
+      "full_name": "weaveworksdemos/shipping:0.4.8",
+      "repo_name": "weaveworksdemos/shipping",
+      "version_tag": "0.4.8",
+      "raw_tags": [
+        "weaveworksdemos/shipping:0.4.8"
+      ],
+      "create_time": "2017-03-16T14:52:32Z",
+      "new_size": 198611718,
+      "new_size_human": "199 MB",
+      "instructions": [
+        {
+          "type": "ADD",
+          "time": "2016-12-27T18:17:13Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 4802964,
+          "size_human": "4.8 MB",
+          "params": "file:eeed5f514a35d18fcd9cbfe6c40c582211020bffdd53e4799018d33826fe5067 in /",
+          "command_snippet": "ADD file:eeed5f514a35d18fcd9cbfe6c40c5822110...",
+          "command_all": "ADD file:eeed5f514a35d18fcd9cbfe6c40c582211020bffdd53e4799018d33826fe5067 /",
+          "target": "/",
+          "source_type": "file"
+        },
+        {
+          "type": "ENV",
+          "time": "2016-12-27T18:37:54Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "LANG=C.UTF-8",
+          "command_snippet": "ENV LANG=C.UTF-8",
+          "command_all": "ENV LANG=C.UTF-8"
+        },
+        {
+          "type": "RUN",
+          "time": "2016-12-27T18:37:55Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 87,
+          "size_human": "87 B",
+          "command_snippet": "RUN { \t\techo '#!/bin/sh'; \t\techo 'set -e'; \t...",
+          "command_all": "RUN { \t\techo '#!/bin/sh'; \t\techo 'set -e'; \t\techo; \t\techo 'dirname \"$(dirname \"$(readlink -f \"$(which javac || which java)\")\")\"'; \t} > /usr/local/bin/docker-java-home && \\\n\tchmod +x /usr/local/bin/docker-java-home",
+          "system_commands": [
+            "{ echo '#!/bin/sh'; echo 'set -e'; echo; echo 'dirname \"$(dirname \"$(readlink -f \"$(which javac || which java)\")\")\"'; } > /usr/local/bin/docker-java-home",
+            "chmod +x /usr/local/bin/docker-java-home"
+          ]
+        },
+        {
+          "type": "ENV",
+          "time": "2016-12-27T18:38:35Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk",
+          "command_snippet": "ENV JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk",
+          "command_all": "ENV JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk"
+        },
+        {
+          "type": "ENV",
+          "time": "2016-12-27T18:38:36Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1.8-openjdk/bin",
+          "command_snippet": "ENV PATH=/usr/local/sbin:/usr/local/bin:/usr...",
+          "command_all": "ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1.8-openjdk/bin"
+        },
+        {
+          "type": "ENV",
+          "time": "2016-12-27T18:38:36Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "JAVA_VERSION=8u111",
+          "command_snippet": "ENV JAVA_VERSION=8u111",
+          "command_all": "ENV JAVA_VERSION=8u111"
+        },
+        {
+          "type": "ENV",
+          "time": "2016-12-27T18:38:37Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "JAVA_ALPINE_VERSION=8.111.14-r0",
+          "command_snippet": "ENV JAVA_ALPINE_VERSION=8.111.14-r0",
+          "command_all": "ENV JAVA_ALPINE_VERSION=8.111.14-r0"
+        },
+        {
+          "type": "RUN",
+          "time": "2016-12-27T18:38:42Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 140214250,
+          "size_human": "140 MB",
+          "command_snippet": "RUN set -x && \\\n\tapk add --no-cache \t\topenjd...",
+          "command_all": "RUN set -x && \\\n\tapk add --no-cache \t\topenjdk8=\"$JAVA_ALPINE_VERSION\" && \\\n\t[ \"$JAVA_HOME\" = \"$(docker-java-home)\" ]",
+          "system_commands": [
+            "set -x",
+            "apk add --no-cache openjdk8=\"$JAVA_ALPINE_VERSION\"",
+            "[ \"$JAVA_HOME\" = \"$(docker-java-home)\" ]"
+          ]
+        },
+        {
+          "type": "ENV",
+          "time": "2017-03-03T13:18:06Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "SERVICE_USER=myuser SERVICE_UID=10001 SERVICE_GROUP=mygroup SERVICE_GID=10001",
+          "command_snippet": "ENV SERVICE_USER=myuser SERVICE_UID=10001 SE...",
+          "command_all": "ENV SERVICE_USER=myuser SERVICE_UID=10001 SERVICE_GROUP=mygroup SERVICE_GID=10001"
+        },
+        {
+          "type": "RUN",
+          "time": "2017-03-03T13:18:07Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 922075,
+          "size_human": "922 kB",
+          "command_snippet": "RUN addgroup -g ${SERVICE_GID} ${SERVICE_GRO...",
+          "command_all": "RUN addgroup -g ${SERVICE_GID} ${SERVICE_GROUP} && \\\n\tadduser -g \"${SERVICE_NAME} user\" -D -H -G ${SERVICE_GROUP} -s /sbin/nologin -u ${SERVICE_UID} ${SERVICE_USER} && \\\n\tapk add --update libcap && \\\n\tmkdir /lib64 && \\\n\tln -s /usr/lib/jvm/java-1.8-openjdk/jre/lib/amd64/server/libjvm.so /lib/libjvm.so && \\\n\tln -s /usr/lib/jvm/java-1.8-openjdk/lib/amd64/jli/libjli.so /lib/libjli.so && \\\n\tsetcap 'cap_net_bind_service=+ep' $(readlink -f $(which java))",
+          "system_commands": [
+            "addgroup -g ${SERVICE_GID} ${SERVICE_GROUP}",
+            "adduser -g \"${SERVICE_NAME} user\" -D -H -G ${SERVICE_GROUP} -s /sbin/nologin -u ${SERVICE_UID} ${SERVICE_USER}",
+            "apk add --update libcap",
+            "mkdir /lib64",
+            "ln -s /usr/lib/jvm/java-1.8-openjdk/jre/lib/amd64/server/libjvm.so /lib/libjvm.so",
+            "ln -s /usr/lib/jvm/java-1.8-openjdk/lib/amd64/jli/libjli.so /lib/libjli.so",
+            "setcap 'cap_net_bind_service=+ep' $(readlink -f $(which java))"
+          ]
+        },
+        {
+          "type": "COPY",
+          "time": "2017-03-03T13:18:07Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 29,
+          "size_human": "29 B",
+          "params": "file:791a724c5a7efd4243653d2d4989517f5777b06eb0e7c4a462deb753476b86d0 in /usr/local/bin/java.sh",
+          "command_snippet": "COPY file:791a724c5a7efd4243653d2d4989517f57...",
+          "command_all": "COPY file:791a724c5a7efd4243653d2d4989517f5777b06eb0e7c4a462deb753476b86d0 /usr/local/bin/java.sh",
+          "target": "/usr/local/bin/java.sh",
+          "source_type": "file"
+        },
+        {
+          "type": "RUN",
+          "time": "2017-03-03T13:18:08Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 29,
+          "size_human": "29 B",
+          "command_snippet": "RUN chmod +x /usr/local/bin/java.sh",
+          "command_all": "RUN chmod +x /usr/local/bin/java.sh",
+          "system_commands": [
+            "chmod +x /usr/local/bin/java.sh"
+          ]
+        },
+        {
+          "type": "ARG",
+          "time": "2017-03-03T13:18:08Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "BUILD_DATE",
+          "command_snippet": "ARG BUILD_DATE",
+          "command_all": "ARG BUILD_DATE"
+        },
+        {
+          "type": "ARG",
+          "time": "2017-03-03T13:18:08Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "BUILD_VERSION",
+          "command_snippet": "ARG BUILD_VERSION",
+          "command_all": "ARG BUILD_VERSION"
+        },
+        {
+          "type": "ARG",
+          "time": "2017-03-03T13:18:08Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "COMMIT",
+          "command_snippet": "ARG COMMIT",
+          "command_all": "ARG COMMIT"
+        },
+        {
+          "type": "WORKDIR",
+          "time": "2017-03-16T14:52:29Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "/usr/src/app",
+          "command_snippet": "WORKDIR /usr/src/app",
+          "command_all": "WORKDIR /usr/src/app",
+          "system_commands": [
+            "mkdir -p /usr/src/app"
+          ]
+        },
+        {
+          "type": "COPY",
+          "time": "2017-03-16T14:52:30Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 26336142,
+          "size_human": "26 MB",
+          "params": "file:25b2e2a923bde6992746aeec3ac4c14795e6d8cb687ba42bf929a9d1f1f54a5a in ./app.jar",
+          "command_snippet": "COPY file:25b2e2a923bde6992746aeec3ac4c14795...",
+          "command_all": "COPY file:25b2e2a923bde6992746aeec3ac4c14795e6d8cb687ba42bf929a9d1f1f54a5a ./app.jar",
+          "target": "./app.jar",
+          "source_type": "file"
+        },
+        {
+          "type": "RUN",
+          "time": "2017-03-16T14:52:31Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 26336142,
+          "size_human": "26 MB",
+          "command_snippet": "RUN chown -R ${SERVICE_USER}:${SERVICE_GROUP...",
+          "command_all": "RUN chown -R ${SERVICE_USER}:${SERVICE_GROUP} ./app.jar",
+          "system_commands": [
+            "chown -R ${SERVICE_USER}:${SERVICE_GROUP} ./app.jar"
+          ]
+        },
+        {
+          "type": "USER",
+          "time": "2017-03-16T14:52:31Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[myuser]",
+          "command_snippet": "USER [myuser]",
+          "command_all": "USER [myuser]"
+        },
+        {
+          "type": "ARG",
+          "time": "2017-03-16T14:52:31Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "BUILD_DATE",
+          "command_snippet": "ARG BUILD_DATE",
+          "command_all": "ARG BUILD_DATE"
+        },
+        {
+          "type": "ARG",
+          "time": "2017-03-16T14:52:31Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "BUILD_VERSION",
+          "command_snippet": "ARG BUILD_VERSION",
+          "command_all": "ARG BUILD_VERSION"
+        },
+        {
+          "type": "ARG",
+          "time": "2017-03-16T14:52:31Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "COMMIT",
+          "command_snippet": "ARG COMMIT",
+          "command_all": "ARG COMMIT"
+        },
+        {
+          "type": "LABEL",
+          "time": "2017-03-16T14:52:31Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "org.label-schema.vendor=Weaveworks org.label-schema.build-date=2017-03-16T14:50:24+0000 org.label-schema.version=0.0.2-SNAPSHOT org.label-schema.name=Socks Shop: Shipping org.label-schema.description=REST API for Shipping service org.label-schema.url=https://github.com/microservices-demo/shipping org.label-schema.vcs-url=github.com:microservices-demo/shipping.git org.label-schema.vcs-ref=c3bc9015fdbfce1265370502c4fd19b45120550e org.label-schema.schema-version=1.0",
+          "command_snippet": "LABEL org.label-schema.vendor=Weaveworks org...",
+          "command_all": "LABEL org.label-schema.vendor=Weaveworks org.label-schema.build-date=2017-03-16T14:50:24+0000 org.label-schema.version=0.0.2-SNAPSHOT org.label-schema.name=Socks Shop: Shipping org.label-schema.description=REST API for Shipping service org.label-schema.url=https://github.com/microservices-demo/shipping org.label-schema.vcs-url=github.com:microservices-demo/shipping.git org.label-schema.vcs-ref=c3bc9015fdbfce1265370502c4fd19b45120550e org.label-schema.schema-version=1.0"
+        },
+        {
+          "type": "ENV",
+          "time": "2017-03-16T14:52:32Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "JAVA_OPTS=-Djava.security.egd=file:/dev/urandom",
+          "command_snippet": "ENV JAVA_OPTS=-Djava.security.egd=file:/dev/...",
+          "command_all": "ENV JAVA_OPTS=-Djava.security.egd=file:/dev/urandom"
+        },
+        {
+          "type": "ENTRYPOINT",
+          "time": "2017-03-16T14:52:32Z",
+          "is_last_instruction": true,
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": true,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"/usr/local/bin/java.sh\",\"-jar\",\"./app.jar\",\"--port=80\"]",
+          "command_snippet": "ENTRYPOINT [\"/usr/local/bin/java.sh\",\"-jar\",...",
+          "command_all": "ENTRYPOINT [\"/usr/local/bin/java.sh\",\"-jar\",\"./app.jar\",\"--port=80\"]",
+          "raw_tags": [
+            "weaveworksdemos/shipping:0.4.8"
+          ]
+        }
+      ]
+    }
+  ]
+}

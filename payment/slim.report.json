@@ -1,0 +1,208 @@
+{
+  "version": "1.0",
+  "engine": "linux|Transformer|1.36.4|8e0e0a59720bb95c708c046cf9ec71b4939803da|2021-09-07_08:07:15AM",
+  "containerized": false,
+  "host_distro": {
+    "name": "Ubuntu",
+    "version": "18.04",
+    "display_name": "Ubuntu 18.04.5 LTS"
+  },
+  "type": "build",
+  "state": "done",
+  "target_reference": "weaveworksdemos/payment:0.4.3",
+  "system": {
+    "type": "Linux",
+    "release": "4.15.0-156-generic",
+    "distro": {
+      "name": "Alpine Linux",
+      "version": "3.4.6",
+      "display_name": "Alpine Linux v3.4"
+    }
+  },
+  "source_image": {
+    "identity": {
+      "id": "sha256:4f2c23055dcdcd18d14df338e305effa4679620588686e1a3bdcb1684189125f",
+      "tags": [
+        "0.4.3"
+      ],
+      "names": [
+        "weaveworksdemos/payment:0.4.3"
+      ],
+      "digests": [
+        "sha256:5ab1c9877480a018d4dda10d6dfa382776e6bca9fc1c60bacbb80903fde8cfe0"
+      ],
+      "full_digests": [
+        "weaveworksdemos/payment@sha256:5ab1c9877480a018d4dda10d6dfa382776e6bca9fc1c60bacbb80903fde8cfe0"
+      ]
+    },
+    "size": 32459351,
+    "size_human": "32 MB",
+    "create_time": "2017-03-21T17:03:41Z",
+    "docker_version": "1.12.3",
+    "architecture": "amd64",
+    "user": "myuser",
+    "exposed_ports": [
+      "80/tcp"
+    ],
+    "os": "linux",
+    "env_vars": [
+      "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "SERVICE_USER=myuser",
+      "SERVICE_UID=10001",
+      "SERVICE_GROUP=mygroup",
+      "SERVICE_GID=10001"
+    ],
+    "container_entry": {
+      "exe_path": ""
+    }
+  },
+  "minified_image_size": 14769140,
+  "minified_image_size_human": "15 MB",
+  "minified_image": "weaveworksdemos/payment.slim",
+  "minified_image_has_data": true,
+  "minified_by": 2.197782064493938,
+  "artifact_location": "/tmp/docker-slim-state/.docker-slim-state/images/4f2c23055dcdcd18d14df338e305effa4679620588686e1a3bdcb1684189125f/artifacts",
+  "container_report_name": "creport.json",
+  "seccomp_profile_name": "weaveworksdemos-payment-seccomp.json",
+  "apparmor_profile_name": "weaveworksdemos-payment-apparmor-profile",
+  "image_stack": [
+    {
+      "is_top_image": true,
+      "id": "sha256:4f2c23055dcdcd18d14df338e305effa4679620588686e1a3bdcb1684189125f",
+      "full_name": "weaveworksdemos/payment:0.4.3",
+      "repo_name": "weaveworksdemos/payment",
+      "version_tag": "0.4.3",
+      "raw_tags": [
+        "weaveworksdemos/payment:0.4.3"
+      ],
+      "create_time": "2017-03-21T17:03:41Z",
+      "new_size": 32459351,
+      "new_size_human": "32 MB",
+      "instructions": [
+        {
+          "type": "ADD",
+          "time": "2017-03-03T20:32:21Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 4807124,
+          "size_human": "4.8 MB",
+          "params": "file:3df55c321c1c8d73f22bc69240c0764290d6cb293da46ba8f94ed25473fb5853 in /",
+          "command_snippet": "ADD file:3df55c321c1c8d73f22bc69240c0764290d...",
+          "command_all": "ADD file:3df55c321c1c8d73f22bc69240c0764290d6cb293da46ba8f94ed25473fb5853 /",
+          "target": "/",
+          "source_type": "file"
+        },
+        {
+          "type": "ENV",
+          "time": "2017-03-21T17:03:38Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "SERVICE_USER=myuser SERVICE_UID=10001 SERVICE_GROUP=mygroup SERVICE_GID=10001",
+          "command_snippet": "ENV SERVICE_USER=myuser SERVICE_UID=10001 SE...",
+          "command_all": "ENV SERVICE_USER=myuser SERVICE_UID=10001 SERVICE_GROUP=mygroup SERVICE_GID=10001"
+        },
+        {
+          "type": "RUN",
+          "time": "2017-03-21T17:03:39Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 854525,
+          "size_human": "854 kB",
+          "command_snippet": "RUN addgroup -g ${SERVICE_GID} ${SERVICE_GRO...",
+          "command_all": "RUN addgroup -g ${SERVICE_GID} ${SERVICE_GROUP} && \\\n\tadduser -g \"${SERVICE_NAME} user\" -D -H -G ${SERVICE_GROUP} -s /sbin/nologin -u ${SERVICE_UID} ${SERVICE_USER} && \\\n\tapk add --update libcap",
+          "system_commands": [
+            "addgroup -g ${SERVICE_GID} ${SERVICE_GROUP}",
+            "adduser -g \"${SERVICE_NAME} user\" -D -H -G ${SERVICE_GROUP} -s /sbin/nologin -u ${SERVICE_UID} ${SERVICE_USER}",
+            "apk add --update libcap"
+          ]
+        },
+        {
+          "type": "WORKDIR",
+          "time": "2017-03-21T17:03:39Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "/",
+          "command_snippet": "WORKDIR /",
+          "command_all": "WORKDIR /",
+          "system_commands": [
+            "mkdir -p /"
+          ]
+        },
+        {
+          "type": "EXPOSE",
+          "time": "2017-03-21T17:03:39Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "80/tcp",
+          "command_snippet": "EXPOSE 80/tcp",
+          "command_all": "EXPOSE 80/tcp"
+        },
+        {
+          "type": "COPY",
+          "time": "2017-03-21T17:03:40Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 13398851,
+          "size_human": "13 MB",
+          "params": "file:98e180011d65702b8ab61a46e3ca3214aaf167e42a794019ae07c5976b861f56 in /",
+          "command_snippet": "COPY file:98e180011d65702b8ab61a46e3ca3214aa...",
+          "command_all": "COPY file:98e180011d65702b8ab61a46e3ca3214aaf167e42a794019ae07c5976b861f56 /",
+          "target": "/",
+          "source_type": "file"
+        },
+        {
+          "type": "RUN",
+          "time": "2017-03-21T17:03:40Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 13398851,
+          "size_human": "13 MB",
+          "command_snippet": "RUN chmod +x /app && \\\n\tchown -R ${SERVICE_U...",
+          "command_all": "RUN chmod +x /app && \\\n\tchown -R ${SERVICE_USER}:${SERVICE_GROUP} /app && \\\n\tsetcap 'cap_net_bind_service=+ep' /app",
+          "system_commands": [
+            "chmod +x /app",
+            "chown -R ${SERVICE_USER}:${SERVICE_GROUP} /app",
+            "setcap 'cap_net_bind_service=+ep' /app"
+          ]
+        },
+        {
+          "type": "USER",
+          "time": "2017-03-21T17:03:41Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[myuser]",
+          "command_snippet": "USER [myuser]",
+          "command_all": "USER [myuser]"
+        },
+        {
+          "type": "CMD",
+          "time": "2017-03-21T17:03:41Z",
+          "is_last_instruction": true,
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": true,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"/app\",\"-port=80\"]",
+          "command_snippet": "CMD [\"/app\",\"-port=80\"]",
+          "command_all": "CMD [\"/app\",\"-port=80\"]",
+          "raw_tags": [
+            "weaveworksdemos/payment:0.4.3"
+          ]
+        }
+      ]
+    }
+  ]
+}

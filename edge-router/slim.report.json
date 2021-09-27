@@ -1,0 +1,222 @@
+{
+  "version": "1.0",
+  "engine": "linux|Transformer|1.36.4|8e0e0a59720bb95c708c046cf9ec71b4939803da|2021-09-07_08:07:15AM",
+  "containerized": false,
+  "host_distro": {
+    "name": "Ubuntu",
+    "version": "18.04",
+    "display_name": "Ubuntu 18.04.5 LTS"
+  },
+  "type": "build",
+  "state": "done",
+  "target_reference": "weaveworksdemos/edge-router:0.1.1",
+  "system": {
+    "type": "Linux",
+    "release": "4.15.0-156-generic",
+    "distro": {
+      "name": "Alpine Linux",
+      "version": "3.4.6",
+      "display_name": "Alpine Linux v3.4"
+    }
+  },
+  "source_image": {
+    "identity": {
+      "id": "sha256:584dac9095de64f54d9987a7a3e8d758270a5bc1f2632a30b140433200b4046f",
+      "tags": [
+        "0.1.1"
+      ],
+      "names": [
+        "weaveworksdemos/edge-router:0.1.1"
+      ],
+      "digests": [
+        "sha256:72855b1ab6ec5b8b7e03429af9fa04a2a87f97a8c139724afc75a47970fa6438"
+      ],
+      "full_digests": [
+        "weaveworksdemos/edge-router@sha256:72855b1ab6ec5b8b7e03429af9fa04a2a87f97a8c139724afc75a47970fa6438"
+      ]
+    },
+    "size": 21898699,
+    "size_human": "22 MB",
+    "create_time": "2017-02-14T09:39:45Z",
+    "docker_version": "1.12.3",
+    "architecture": "amd64",
+    "exposed_ports": [
+      "80/tcp"
+    ],
+    "os": "linux",
+    "labels": {
+      "org.label-schema.description": "A modern reverse-proxy",
+      "org.label-schema.docker.schema-version": "1.0",
+      "org.label-schema.name": "Traefik",
+      "org.label-schema.url": "https://traefik.io",
+      "org.label-schema.vendor": "Containous",
+      "org.label-schema.version": "v1.1.2"
+    },
+    "env_vars": [
+      "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+    ],
+    "container_entry": {
+      "exe_path": ""
+    }
+  },
+  "minified_image_size": 18118132,
+  "minified_image_size_human": "18 MB",
+  "minified_image": "weaveworksdemos/edge-router.slim",
+  "minified_image_has_data": true,
+  "minified_by": 1.2086620739930585,
+  "artifact_location": "/tmp/docker-slim-state/.docker-slim-state/images/584dac9095de64f54d9987a7a3e8d758270a5bc1f2632a30b140433200b4046f/artifacts",
+  "container_report_name": "creport.json",
+  "seccomp_profile_name": "weaveworksdemos-edge-router-seccomp.json",
+  "apparmor_profile_name": "weaveworksdemos-edge-router-apparmor-profile",
+  "image_stack": [
+    {
+      "is_top_image": true,
+      "id": "sha256:584dac9095de64f54d9987a7a3e8d758270a5bc1f2632a30b140433200b4046f",
+      "full_name": "weaveworksdemos/edge-router:0.1.1",
+      "repo_name": "weaveworksdemos/edge-router",
+      "version_tag": "0.1.1",
+      "raw_tags": [
+        "weaveworksdemos/edge-router:0.1.1"
+      ],
+      "create_time": "2017-02-14T09:39:45Z",
+      "new_size": 21898699,
+      "new_size_human": "22 MB",
+      "instructions": [
+        {
+          "type": "ADD",
+          "time": "2016-12-27T18:17:13Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 4802964,
+          "size_human": "4.8 MB",
+          "params": "file:eeed5f514a35d18fcd9cbfe6c40c582211020bffdd53e4799018d33826fe5067 in /",
+          "command_snippet": "ADD file:eeed5f514a35d18fcd9cbfe6c40c5822110...",
+          "command_all": "ADD file:eeed5f514a35d18fcd9cbfe6c40c582211020bffdd53e4799018d33826fe5067 /",
+          "target": "/",
+          "source_type": "file"
+        },
+        {
+          "type": "RUN",
+          "time": "2016-12-27T22:08:21Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 621893,
+          "size_human": "622 kB",
+          "command_snippet": "RUN apk --update upgrade && \\\n\tapk --no-cach...",
+          "command_all": "RUN apk --update upgrade && \\\n\tapk --no-cache --no-progress add ca-certificates && \\\n\trm -rf /var/cache/apk/*",
+          "system_commands": [
+            "apk --update upgrade",
+            "apk --no-cache --no-progress add ca-certificates",
+            "rm -rf /var/cache/apk/*"
+          ]
+        },
+        {
+          "type": "COPY",
+          "time": "2016-12-27T22:08:22Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 16473056,
+          "size_human": "16 MB",
+          "params": "file:29b1fa12b70d2862f67cec3f481f6cc7866d44322d068d99898a0020e3561814 in /usr/local/bin/",
+          "command_snippet": "COPY file:29b1fa12b70d2862f67cec3f481f6cc786...",
+          "command_all": "COPY file:29b1fa12b70d2862f67cec3f481f6cc7866d44322d068d99898a0020e3561814 /usr/local/bin/",
+          "target": "/usr/local/bin/",
+          "source_type": "file"
+        },
+        {
+          "type": "COPY",
+          "time": "2016-12-27T22:08:23Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 380,
+          "size_human": "380 B",
+          "params": "file:41f5bd1ea0a61e819b7d8c5489c305d4f2798046917dd6b6695318f555981727 in /",
+          "command_snippet": "COPY file:41f5bd1ea0a61e819b7d8c5489c305d4f2...",
+          "command_all": "COPY file:41f5bd1ea0a61e819b7d8c5489c305d4f2798046917dd6b6695318f555981727 /",
+          "target": "/",
+          "source_type": "file"
+        },
+        {
+          "type": "EXPOSE",
+          "time": "2016-12-27T22:08:23Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "80/tcp",
+          "command_snippet": "EXPOSE 80/tcp",
+          "command_all": "EXPOSE 80/tcp"
+        },
+        {
+          "type": "ENTRYPOINT",
+          "time": "2016-12-27T22:08:24Z",
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"/entrypoint.sh\"]",
+          "command_snippet": "ENTRYPOINT [\"/entrypoint.sh\"]",
+          "command_all": "ENTRYPOINT [\"/entrypoint.sh\"]"
+        },
+        {
+          "type": "CMD",
+          "time": "2016-12-27T22:08:24Z",
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"--help\"]",
+          "command_snippet": "CMD [\"--help\"]",
+          "command_all": "CMD [\"--help\"]"
+        },
+        {
+          "type": "LABEL",
+          "time": "2016-12-27T22:08:24Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "org.label-schema.vendor=Containous org.label-schema.url=https://traefik.io org.label-schema.name=Traefik org.label-schema.description=A modern reverse-proxy org.label-schema.version=v1.1.2 org.label-schema.docker.schema-version=1.0",
+          "command_snippet": "LABEL org.label-schema.vendor=Containous org...",
+          "command_all": "LABEL org.label-schema.vendor=Containous org.label-schema.url=https://traefik.io org.label-schema.name=Traefik org.label-schema.description=A modern reverse-proxy org.label-schema.version=v1.1.2 org.label-schema.docker.schema-version=1.0"
+        },
+        {
+          "type": "COPY",
+          "time": "2017-02-14T09:39:45Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 406,
+          "size_human": "406 B",
+          "params": "file:42bc15d153fb33c14c1011017542c08d0a1d4c55640ffe6db63e24e7741feed2 in /etc/traefik/traefik.toml",
+          "command_snippet": "COPY file:42bc15d153fb33c14c1011017542c08d0a...",
+          "command_all": "COPY file:42bc15d153fb33c14c1011017542c08d0a1d4c55640ffe6db63e24e7741feed2 /etc/traefik/traefik.toml",
+          "target": "/etc/traefik/traefik.toml",
+          "source_type": "file"
+        },
+        {
+          "type": "ENTRYPOINT",
+          "time": "2017-02-14T09:39:45Z",
+          "is_last_instruction": true,
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": true,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"traefik\"]",
+          "command_snippet": "ENTRYPOINT [\"traefik\"]",
+          "command_all": "ENTRYPOINT [\"traefik\"]",
+          "raw_tags": [
+            "weaveworksdemos/edge-router:0.1.1"
+          ]
+        }
+      ]
+    }
+  ]
+}

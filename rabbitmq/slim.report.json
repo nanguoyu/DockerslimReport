@@ -1,0 +1,448 @@
+{
+  "version": "1.0",
+  "engine": "linux|Transformer|1.36.4|8e0e0a59720bb95c708c046cf9ec71b4939803da|2021-09-07_08:07:15AM",
+  "containerized": false,
+  "host_distro": {
+    "name": "Ubuntu",
+    "version": "18.04",
+    "display_name": "Ubuntu 18.04.5 LTS"
+  },
+  "type": "build",
+  "state": "done",
+  "target_reference": "rabbitmq:3.6.8",
+  "system": {
+    "type": "Linux",
+    "release": "4.15.0-156-generic",
+    "distro": {
+      "name": "Debian GNU/Linux",
+      "version": "8",
+      "display_name": "Debian GNU/Linux 8 (jessie)"
+    }
+  },
+  "source_image": {
+    "identity": {
+      "id": "sha256:8cdcbee37f622c52f2b8a572577c4aa94daed06ffe8c3292c93141ed50bef248",
+      "tags": [
+        "3.6.8"
+      ],
+      "names": [
+        "rabbitmq:3.6.8"
+      ],
+      "digests": [
+        "sha256:a9f4923559bbcd00b93b02e61615aef5eb6f1d1c98db51053bab0fa6b680db26"
+      ],
+      "full_digests": [
+        "rabbitmq@sha256:a9f4923559bbcd00b93b02e61615aef5eb6f1d1c98db51053bab0fa6b680db26"
+      ]
+    },
+    "size": 179449238,
+    "size_human": "179 MB",
+    "create_time": "2017-03-21T23:56:44Z",
+    "docker_version": "1.12.6",
+    "architecture": "amd64",
+    "exposed_ports": [
+      "4369/tcp",
+      "5671/tcp",
+      "5672/tcp",
+      "25672/tcp"
+    ],
+    "os": "linux",
+    "volumes": [
+      "/var/lib/rabbitmq"
+    ],
+    "env_vars": [
+      "PATH=/usr/lib/rabbitmq/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "GOSU_VERSION=1.7",
+      "RABBITMQ_LOGS=-",
+      "RABBITMQ_SASL_LOGS=-",
+      "RABBITMQ_VERSION=3.6.8",
+      "RABBITMQ_DEBIAN_VERSION=3.6.8-1",
+      "HOME=/var/lib/rabbitmq"
+    ],
+    "container_entry": {
+      "exe_path": ""
+    }
+  },
+  "minified_image_size": 30773831,
+  "minified_image_size_human": "31 MB",
+  "minified_image": "rabbitmq.slim",
+  "minified_image_has_data": true,
+  "minified_by": 5.831228422616606,
+  "artifact_location": "/tmp/docker-slim-state/.docker-slim-state/images/8cdcbee37f622c52f2b8a572577c4aa94daed06ffe8c3292c93141ed50bef248/artifacts",
+  "container_report_name": "creport.json",
+  "seccomp_profile_name": "rabbitmq-seccomp.json",
+  "apparmor_profile_name": "rabbitmq-apparmor-profile",
+  "image_stack": [
+    {
+      "is_top_image": true,
+      "id": "sha256:8cdcbee37f622c52f2b8a572577c4aa94daed06ffe8c3292c93141ed50bef248",
+      "full_name": "rabbitmq:3.6.8",
+      "repo_name": "rabbitmq",
+      "version_tag": "3.6.8",
+      "raw_tags": [
+        "rabbitmq:3.6.8"
+      ],
+      "create_time": "2017-03-21T23:56:44Z",
+      "new_size": 179449238,
+      "new_size_human": "179 MB",
+      "instructions": [
+        {
+          "type": "ADD",
+          "time": "2017-03-21T18:28:51Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 123393418,
+          "size_human": "123 MB",
+          "params": "file:4eedf861fb567fffb2694b65ebdd58d5e371a2c28c3863f363f333cb34e5eb7b in /",
+          "command_snippet": "ADD file:4eedf861fb567fffb2694b65ebdd58d5e37...",
+          "command_all": "ADD file:4eedf861fb567fffb2694b65ebdd58d5e371a2c28c3863f363f333cb34e5eb7b /",
+          "target": "/",
+          "source_type": "file"
+        },
+        {
+          "type": "CMD",
+          "time": "2017-03-21T18:29:05Z",
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"/bin/bash\"]",
+          "command_snippet": "CMD [\"/bin/bash\"]",
+          "command_all": "CMD [\"/bin/bash\"]"
+        },
+        {
+          "type": "RUN",
+          "time": "2017-03-21T23:55:41Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 334802,
+          "size_human": "335 kB",
+          "command_snippet": "RUN groupadd -r rabbitmq && \\\n\tuseradd -r -d...",
+          "command_all": "RUN groupadd -r rabbitmq && \\\n\tuseradd -r -d /var/lib/rabbitmq -m -g rabbitmq rabbitmq",
+          "system_commands": [
+            "groupadd -r rabbitmq",
+            "useradd -r -d /var/lib/rabbitmq -m -g rabbitmq rabbitmq"
+          ]
+        },
+        {
+          "type": "ENV",
+          "time": "2017-03-21T23:55:41Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "GOSU_VERSION=1.7",
+          "command_snippet": "ENV GOSU_VERSION=1.7",
+          "command_all": "ENV GOSU_VERSION=1.7"
+        },
+        {
+          "type": "RUN",
+          "time": "2017-03-21T23:55:56Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 4581163,
+          "size_human": "4.6 MB",
+          "command_snippet": "RUN set -x && \\\n\tapt-get update && \\\n\tapt-ge...",
+          "command_all": "RUN set -x && \\\n\tapt-get update && \\\n\tapt-get install -y --no-install-recommends ca-certificates wget && \\\n\trm -rf /var/lib/apt/lists/* && \\\n\twget -O /usr/local/bin/gosu \"https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$(dpkg --print-architecture)\" && \\\n\twget -O /usr/local/bin/gosu.asc \"https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$(dpkg --print-architecture).asc\" && \\\n\texport GNUPGHOME=\"$(mktemp -d)\" && \\\n\tgpg --keyserver ha.pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4 && \\\n\tgpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu && \\\n\trm -r \"$GNUPGHOME\" /usr/local/bin/gosu.asc && \\\n\tchmod +x /usr/local/bin/gosu && \\\n\tgosu nobody true && \\\n\tapt-get purge -y --auto-remove ca-certificates wget",
+          "system_commands": [
+            "set -x",
+            "apt-get update",
+            "apt-get install -y --no-install-recommends ca-certificates wget",
+            "rm -rf /var/lib/apt/lists/*",
+            "wget -O /usr/local/bin/gosu \"https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$(dpkg --print-architecture)\"",
+            "wget -O /usr/local/bin/gosu.asc \"https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$(dpkg --print-architecture).asc\"",
+            "export GNUPGHOME=\"$(mktemp -d)\"",
+            "gpg --keyserver ha.pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4",
+            "gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu",
+            "rm -r \"$GNUPGHOME\" /usr/local/bin/gosu.asc",
+            "chmod +x /usr/local/bin/gosu",
+            "gosu nobody true",
+            "apt-get purge -y --auto-remove ca-certificates wget"
+          ]
+        },
+        {
+          "type": "RUN",
+          "time": "2017-03-21T23:55:58Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 2228,
+          "size_human": "2.2 kB",
+          "command_snippet": "RUN set -ex; \tkey='434975BD900CCBE4F7EE1B1ED...",
+          "command_all": "RUN set -ex; \tkey='434975BD900CCBE4F7EE1B1ED208507CA14F4FCA'; \texport GNUPGHOME=\"$(mktemp -d)\"; \tgpg --keyserver ha.pool.sks-keyservers.net --recv-keys \"$key\"; \tgpg --export \"$key\" > /etc/apt/trusted.gpg.d/erlang-solutions.gpg; \trm -r \"$GNUPGHOME\"; \tapt-key list",
+          "system_commands": [
+            "set -ex",
+            "key='434975BD900CCBE4F7EE1B1ED208507CA14F4FCA'",
+            "export GNUPGHOME=\"$(mktemp -d)\"",
+            "gpg --keyserver ha.pool.sks-keyservers.net --recv-keys \"$key\"",
+            "gpg --export \"$key\" > /etc/apt/trusted.gpg.d/erlang-solutions.gpg",
+            "rm -r \"$GNUPGHOME\"",
+            "apt-key list"
+          ]
+        },
+        {
+          "type": "RUN",
+          "time": "2017-03-21T23:55:59Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 63,
+          "size_human": "63 B",
+          "command_snippet": "RUN echo 'deb http://packages.erlang-solutio...",
+          "command_all": "RUN echo 'deb http://packages.erlang-solutions.com/debian jessie contrib' > /etc/apt/sources.list.d/erlang.list",
+          "system_commands": [
+            "echo 'deb http://packages.erlang-solutions.com/debian jessie contrib' > /etc/apt/sources.list.d/erlang.list"
+          ]
+        },
+        {
+          "type": "RUN",
+          "time": "2017-03-21T23:56:26Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 43754060,
+          "size_human": "44 MB",
+          "command_snippet": "RUN apt-get update && \\\n\tapt-get install -y ...",
+          "command_all": "RUN apt-get update && \\\n\tapt-get install -y --no-install-recommends \t\terlang-asn1 \t\terlang-base-hipe \t\terlang-crypto \t\terlang-eldap \t\terlang-inets \t\terlang-mnesia \t\terlang-nox \t\terlang-os-mon \t\terlang-public-key \t\terlang-ssl \t\terlang-xmerl && \\\n\trm -rf /var/lib/apt/lists/*",
+          "system_commands": [
+            "apt-get update",
+            "apt-get install -y --no-install-recommends erlang-asn1 erlang-base-hipe erlang-crypto erlang-eldap erlang-inets erlang-mnesia erlang-nox erlang-os-mon erlang-public-key erlang-ssl erlang-xmerl",
+            "rm -rf /var/lib/apt/lists/*"
+          ]
+        },
+        {
+          "type": "ENV",
+          "time": "2017-03-21T23:56:27Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "RABBITMQ_LOGS=- RABBITMQ_SASL_LOGS=-",
+          "command_snippet": "ENV RABBITMQ_LOGS=- RABBITMQ_SASL_LOGS=-",
+          "command_all": "ENV RABBITMQ_LOGS=- RABBITMQ_SASL_LOGS=-"
+        },
+        {
+          "type": "RUN",
+          "time": "2017-03-21T23:56:28Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 2837,
+          "size_human": "2.8 kB",
+          "command_snippet": "RUN set -ex; \tkey='0A9AF2115F4687BD29803A206...",
+          "command_all": "RUN set -ex; \tkey='0A9AF2115F4687BD29803A206B73A36E6026DFCA'; \texport GNUPGHOME=\"$(mktemp -d)\"; \tgpg --keyserver ha.pool.sks-keyservers.net --recv-keys \"$key\"; \tgpg --export \"$key\" > /etc/apt/trusted.gpg.d/rabbitmq.gpg; \trm -r \"$GNUPGHOME\"; \tapt-key list",
+          "system_commands": [
+            "set -ex",
+            "key='0A9AF2115F4687BD29803A206B73A36E6026DFCA'",
+            "export GNUPGHOME=\"$(mktemp -d)\"",
+            "gpg --keyserver ha.pool.sks-keyservers.net --recv-keys \"$key\"",
+            "gpg --export \"$key\" > /etc/apt/trusted.gpg.d/rabbitmq.gpg",
+            "rm -r \"$GNUPGHOME\"",
+            "apt-key list"
+          ]
+        },
+        {
+          "type": "RUN",
+          "time": "2017-03-21T23:56:29Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 48,
+          "size_human": "48 B",
+          "command_snippet": "RUN echo 'deb http://www.rabbitmq.com/debian...",
+          "command_all": "RUN echo 'deb http://www.rabbitmq.com/debian testing main' > /etc/apt/sources.list.d/rabbitmq.list",
+          "system_commands": [
+            "echo 'deb http://www.rabbitmq.com/debian testing main' > /etc/apt/sources.list.d/rabbitmq.list"
+          ]
+        },
+        {
+          "type": "ENV",
+          "time": "2017-03-21T23:56:29Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "RABBITMQ_VERSION=3.6.8",
+          "command_snippet": "ENV RABBITMQ_VERSION=3.6.8",
+          "command_all": "ENV RABBITMQ_VERSION=3.6.8"
+        },
+        {
+          "type": "ENV",
+          "time": "2017-03-21T23:56:30Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "RABBITMQ_DEBIAN_VERSION=3.6.8-1",
+          "command_snippet": "ENV RABBITMQ_DEBIAN_VERSION=3.6.8-1",
+          "command_all": "ENV RABBITMQ_DEBIAN_VERSION=3.6.8-1"
+        },
+        {
+          "type": "RUN",
+          "time": "2017-03-21T23:56:36Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 7368803,
+          "size_human": "7.4 MB",
+          "command_snippet": "RUN apt-get update && \\\n\tapt-get install -y ...",
+          "command_all": "RUN apt-get update && \\\n\tapt-get install -y --no-install-recommends \t\trabbitmq-server=$RABBITMQ_DEBIAN_VERSION && \\\n\trm -rf /var/lib/apt/lists/*",
+          "system_commands": [
+            "apt-get update",
+            "apt-get install -y --no-install-recommends rabbitmq-server=$RABBITMQ_DEBIAN_VERSION",
+            "rm -rf /var/lib/apt/lists/*"
+          ]
+        },
+        {
+          "type": "ENV",
+          "time": "2017-03-21T23:56:37Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "PATH=/usr/lib/rabbitmq/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "command_snippet": "ENV PATH=/usr/lib/rabbitmq/bin:/usr/local/sb...",
+          "command_all": "ENV PATH=/usr/lib/rabbitmq/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+        },
+        {
+          "type": "ENV",
+          "time": "2017-03-21T23:56:37Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "HOME=/var/lib/rabbitmq",
+          "command_snippet": "ENV HOME=/var/lib/rabbitmq",
+          "command_all": "ENV HOME=/var/lib/rabbitmq"
+        },
+        {
+          "type": "RUN",
+          "time": "2017-03-21T23:56:38Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 4455,
+          "size_human": "4.5 kB",
+          "command_snippet": "RUN mkdir -p /var/lib/rabbitmq /etc/rabbitmq...",
+          "command_all": "RUN mkdir -p /var/lib/rabbitmq /etc/rabbitmq && \\\n\techo '[ { rabbit, [ { loopback_users, [ ] } ] } ].' > /etc/rabbitmq/rabbitmq.config && \\\n\tchown -R rabbitmq:rabbitmq /var/lib/rabbitmq /etc/rabbitmq && \\\n\tchmod -R 777 /var/lib/rabbitmq /etc/rabbitmq",
+          "system_commands": [
+            "mkdir -p /var/lib/rabbitmq /etc/rabbitmq",
+            "echo '[ { rabbit, [ { loopback_users, [ ] } ] } ].' > /etc/rabbitmq/rabbitmq.config",
+            "chown -R rabbitmq:rabbitmq /var/lib/rabbitmq /etc/rabbitmq",
+            "chmod -R 777 /var/lib/rabbitmq /etc/rabbitmq"
+          ]
+        },
+        {
+          "type": "VOLUME",
+          "time": "2017-03-21T23:56:38Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[/var/lib/rabbitmq]",
+          "command_snippet": "VOLUME [/var/lib/rabbitmq]",
+          "command_all": "VOLUME [/var/lib/rabbitmq]"
+        },
+        {
+          "type": "RUN",
+          "time": "2017-03-21T23:56:39Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 32,
+          "size_human": "32 B",
+          "command_snippet": "RUN ln -sf /var/lib/rabbitmq/.erlang.cookie ...",
+          "command_all": "RUN ln -sf /var/lib/rabbitmq/.erlang.cookie /root/",
+          "system_commands": [
+            "ln -sf /var/lib/rabbitmq/.erlang.cookie /root/"
+          ]
+        },
+        {
+          "type": "RUN",
+          "time": "2017-03-21T23:56:40Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 51,
+          "size_human": "51 B",
+          "command_snippet": "RUN ln -sf /usr/lib/rabbitmq/lib/rabbitmq_se...",
+          "command_all": "RUN ln -sf /usr/lib/rabbitmq/lib/rabbitmq_server-$RABBITMQ_VERSION/plugins /plugins",
+          "system_commands": [
+            "ln -sf /usr/lib/rabbitmq/lib/rabbitmq_server-$RABBITMQ_VERSION/plugins /plugins"
+          ]
+        },
+        {
+          "type": "COPY",
+          "time": "2017-03-21T23:56:41Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 7244,
+          "size_human": "7.2 kB",
+          "params": "file:aea0de868079820b38523daba3301f9d1b03f85139fbcab491d2bc10c2540046 in /usr/local/bin/",
+          "command_snippet": "COPY file:aea0de868079820b38523daba3301f9d1b...",
+          "command_all": "COPY file:aea0de868079820b38523daba3301f9d1b03f85139fbcab491d2bc10c2540046 /usr/local/bin/",
+          "target": "/usr/local/bin/",
+          "source_type": "file"
+        },
+        {
+          "type": "RUN",
+          "time": "2017-03-21T23:56:42Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 34,
+          "size_human": "34 B",
+          "command_snippet": "RUN ln -s usr/local/bin/docker-entrypoint.sh...",
+          "command_all": "RUN ln -s usr/local/bin/docker-entrypoint.sh / # backwards compat",
+          "system_commands": [
+            "ln -s usr/local/bin/docker-entrypoint.sh / # backwards compat"
+          ]
+        },
+        {
+          "type": "ENTRYPOINT",
+          "time": "2017-03-21T23:56:43Z",
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"docker-entrypoint.sh\"]",
+          "command_snippet": "ENTRYPOINT [\"docker-entrypoint.sh\"]",
+          "command_all": "ENTRYPOINT [\"docker-entrypoint.sh\"]"
+        },
+        {
+          "type": "EXPOSE",
+          "time": "2017-03-21T23:56:43Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "25672/tcp 4369/tcp 5671/tcp 5672/tcp",
+          "command_snippet": "EXPOSE 25672/tcp 4369/tcp 5671/tcp 5672/tcp",
+          "command_all": "EXPOSE 25672/tcp 4369/tcp 5671/tcp 5672/tcp"
+        },
+        {
+          "type": "CMD",
+          "time": "2017-03-21T23:56:44Z",
+          "is_last_instruction": true,
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": true,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"rabbitmq-server\"]",
+          "command_snippet": "CMD [\"rabbitmq-server\"]",
+          "command_all": "CMD [\"rabbitmq-server\"]",
+          "raw_tags": [
+            "rabbitmq:3.6.8"
+          ]
+        }
+      ]
+    }
+  ]
+}

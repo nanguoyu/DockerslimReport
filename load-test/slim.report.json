@@ -1,0 +1,399 @@
+{
+  "version": "1.0",
+  "engine": "linux|Transformer|1.36.4|8e0e0a59720bb95c708c046cf9ec71b4939803da|2021-09-07_08:07:15AM",
+  "containerized": false,
+  "host_distro": {
+    "name": "Ubuntu",
+    "version": "18.04",
+    "display_name": "Ubuntu 18.04.5 LTS"
+  },
+  "type": "build",
+  "state": "done",
+  "target_reference": "weaveworksdemos/load-test:0.1.1",
+  "system": {
+    "type": "Linux",
+    "release": "4.15.0-156-generic",
+    "distro": {
+      "name": "Debian GNU/Linux",
+      "version": "7",
+      "display_name": "Debian GNU/Linux 7 (wheezy)"
+    }
+  },
+  "source_image": {
+    "identity": {
+      "id": "sha256:3ab3fd5cd04e5af84a97aa873766ac4b228334ea77fab8d39bfac8d454888c5a",
+      "tags": [
+        "0.1.1",
+        "latest"
+      ],
+      "names": [
+        "weaveworksdemos/load-test:0.1.1",
+        "weaveworksdemos/load-test:latest"
+      ],
+      "digests": [
+        "sha256:536d46f8c867e4ff4c3ed69848955b487f9bec060539c169f190fe522650e5cd"
+      ],
+      "full_digests": [
+        "weaveworksdemos/load-test@sha256:536d46f8c867e4ff4c3ed69848955b487f9bec060539c169f190fe522650e5cd"
+      ]
+    },
+    "size": 569739292,
+    "size_human": "570 MB",
+    "create_time": "2017-05-24T09:07:45Z",
+    "docker_version": "1.12.3",
+    "architecture": "amd64",
+    "exposed_ports": [
+      "8089/tcp"
+    ],
+    "os": "linux",
+    "env_vars": [
+      "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "LANG=C.UTF-8",
+      "GPG_KEY=C01E1CAD5EA2C4F0B8E3571504C367C218ADD4FF",
+      "PYTHON_VERSION=2.7.13",
+      "PYTHON_PIP_VERSION=9.0.1",
+      "LOCUST_FILE=/config/locustfile.py"
+    ],
+    "container_entry": {
+      "exe_path": ""
+    }
+  },
+  "minified_image_size": 48244263,
+  "minified_image_size_human": "48 MB",
+  "minified_image": "weaveworksdemos/load-test.slim",
+  "minified_image_has_data": true,
+  "minified_by": 11.809472392603448,
+  "artifact_location": "/tmp/docker-slim-state/.docker-slim-state/images/3ab3fd5cd04e5af84a97aa873766ac4b228334ea77fab8d39bfac8d454888c5a/artifacts",
+  "container_report_name": "creport.json",
+  "seccomp_profile_name": "weaveworksdemos-load-test-seccomp.json",
+  "apparmor_profile_name": "weaveworksdemos-load-test-apparmor-profile",
+  "image_stack": [
+    {
+      "is_top_image": true,
+      "id": "sha256:3ab3fd5cd04e5af84a97aa873766ac4b228334ea77fab8d39bfac8d454888c5a",
+      "full_name": "weaveworksdemos/load-test:0.1.1",
+      "repo_name": "weaveworksdemos/load-test",
+      "version_tag": "0.1.1",
+      "raw_tags": [
+        "weaveworksdemos/load-test:0.1.1",
+        "weaveworksdemos/load-test:latest"
+      ],
+      "create_time": "2017-05-24T09:07:45Z",
+      "new_size": 569739292,
+      "new_size_human": "570 MB",
+      "instructions": [
+        {
+          "type": "ADD",
+          "time": "2017-05-08T23:41:02Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 85254212,
+          "size_human": "85 MB",
+          "params": "file:5f4eeb9d08ac23595a4130e8b7689bd25379e92fecf5f62e18ea0f1c95d73c33 in /",
+          "command_snippet": "ADD file:5f4eeb9d08ac23595a4130e8b7689bd2537...",
+          "command_all": "ADD file:5f4eeb9d08ac23595a4130e8b7689bd25379e92fecf5f62e18ea0f1c95d73c33 /",
+          "target": "/",
+          "source_type": "file"
+        },
+        {
+          "type": "CMD",
+          "time": "2017-05-08T23:41:17Z",
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"/bin/bash\"]",
+          "command_snippet": "CMD [\"/bin/bash\"]",
+          "command_all": "CMD [\"/bin/bash\"]"
+        },
+        {
+          "type": "RUN",
+          "time": "2017-05-09T00:07:47Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 14568041,
+          "size_human": "15 MB",
+          "command_snippet": "RUN apt-get update && \\\n\tapt-get install -y ...",
+          "command_all": "RUN apt-get update && \\\n\tapt-get install -y --no-install-recommends \t\tca-certificates \t\tcurl \t\twget && \\\n\trm -rf /var/lib/apt/lists/*",
+          "system_commands": [
+            "apt-get update",
+            "apt-get install -y --no-install-recommends ca-certificates curl wget",
+            "rm -rf /var/lib/apt/lists/*"
+          ]
+        },
+        {
+          "type": "RUN",
+          "time": "2017-05-09T00:08:50Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 110388738,
+          "size_human": "110 MB",
+          "command_snippet": "RUN apt-get update && \\\n\tapt-get install -y ...",
+          "command_all": "RUN apt-get update && \\\n\tapt-get install -y --no-install-recommends \t\tbzr \t\tgit \t\tmercurial \t\topenssh-client \t\tsubversion \t\t\t\tprocps && \\\n\trm -rf /var/lib/apt/lists/*",
+          "system_commands": [
+            "apt-get update",
+            "apt-get install -y --no-install-recommends bzr git mercurial openssh-client subversion procps",
+            "rm -rf /var/lib/apt/lists/*"
+          ]
+        },
+        {
+          "type": "RUN",
+          "time": "2017-05-09T00:10:30Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 254104688,
+          "size_human": "254 MB",
+          "command_snippet": "RUN set -ex; \tapt-get update; \tapt-get insta...",
+          "command_all": "RUN set -ex; \tapt-get update; \tapt-get install -y --no-install-recommends \t\tautoconf \t\tautomake \t\tbzip2 \t\tfile \t\tg++ \t\tgcc \t\timagemagick \t\tlibbz2-dev \t\tlibc6-dev \t\tlibcurl4-openssl-dev \t\tlibdb-dev \t\tlibevent-dev \t\tlibffi-dev \t\tlibgdbm-dev \t\tlibgeoip-dev \t\tlibglib2.0-dev \t\tlibjpeg-dev \t\tlibkrb5-dev \t\tliblzma-dev \t\tlibmagickcore-dev \t\tlibmagickwand-dev \t\tlibncurses-dev \t\tlibpng-dev \t\tlibpq-dev \t\tlibreadline-dev \t\tlibsqlite3-dev \t\tlibssl-dev \t\tlibtool \t\tlibwebp-dev \t\tlibxml2-dev \t\tlibxslt-dev \t\tlibyaml-dev \t\tmake \t\tpatch \t\txz-utils \t\tzlib1g-dev \t\t\t\t$( \t\t\tif apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then \t\t\t\techo 'default-libmysqlclient-dev'; \t\t\telse \t\t\t\techo 'libmysqlclient-dev'; \t\t\tfi \t\t) \t; \trm -rf /var/lib/apt/lists/*",
+          "system_commands": [
+            "set -ex",
+            "apt-get update",
+            "apt-get install -y --no-install-recommends autoconf automake bzip2 file g++ gcc imagemagick libbz2-dev libc6-dev libcurl4-openssl-dev libdb-dev libevent-dev libffi-dev libgdbm-dev libgeoip-dev libglib2.0-dev libjpeg-dev libkrb5-dev liblzma-dev libmagickcore-dev libmagickwand-dev libncurses-dev libpng-dev libpq-dev libreadline-dev libsqlite3-dev libssl-dev libtool libwebp-dev libxml2-dev libxslt-dev libyaml-dev make patch xz-utils zlib1g-dev $( if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'",
+            "then echo 'default-libmysqlclient-dev'",
+            "else echo 'libmysqlclient-dev'",
+            "fi )",
+            "rm -rf /var/lib/apt/lists/*"
+          ]
+        },
+        {
+          "type": "ENV",
+          "time": "2017-05-10T03:03:04Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "command_snippet": "ENV PATH=/usr/local/bin:/usr/local/sbin:/usr...",
+          "command_all": "ENV PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+        },
+        {
+          "type": "ENV",
+          "time": "2017-05-10T03:03:05Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "LANG=C.UTF-8",
+          "command_snippet": "ENV LANG=C.UTF-8",
+          "command_all": "ENV LANG=C.UTF-8"
+        },
+        {
+          "type": "RUN",
+          "time": "2017-05-10T03:03:17Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 8315396,
+          "size_human": "8.3 MB",
+          "command_snippet": "RUN apt-get update && \\\n\tapt-get install -y ...",
+          "command_all": "RUN apt-get update && \\\n\tapt-get install -y --no-install-recommends \t\ttcl \t\ttk && \\\n\trm -rf /var/lib/apt/lists/*",
+          "system_commands": [
+            "apt-get update",
+            "apt-get install -y --no-install-recommends tcl tk",
+            "rm -rf /var/lib/apt/lists/*"
+          ]
+        },
+        {
+          "type": "ENV",
+          "time": "2017-05-10T03:03:18Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "GPG_KEY=C01E1CAD5EA2C4F0B8E3571504C367C218ADD4FF",
+          "command_snippet": "ENV GPG_KEY=C01E1CAD5EA2C4F0B8E3571504C367C2...",
+          "command_all": "ENV GPG_KEY=C01E1CAD5EA2C4F0B8E3571504C367C218ADD4FF"
+        },
+        {
+          "type": "ENV",
+          "time": "2017-05-10T03:03:18Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "PYTHON_VERSION=2.7.13",
+          "command_snippet": "ENV PYTHON_VERSION=2.7.13",
+          "command_all": "ENV PYTHON_VERSION=2.7.13"
+        },
+        {
+          "type": "RUN",
+          "time": "2017-05-11T21:45:20Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 46367099,
+          "size_human": "46 MB",
+          "command_snippet": "RUN set -ex && \\\n\tbuildDeps=' \t\tdpkg-dev \t\tt...",
+          "command_all": "RUN set -ex && \\\n\tbuildDeps=' \t\tdpkg-dev \t\ttcl-dev \t\ttk-dev \t' && \\\n\tapt-get update && \\\n\tapt-get install -y $buildDeps --no-install-recommends && \\\n\trm -rf /var/lib/apt/lists/* && \\\n\twget -O python.tar.xz \"https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz\" && \\\n\twget -O python.tar.xz.asc \"https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc\" && \\\n\texport GNUPGHOME=\"$(mktemp -d)\" && \\\n\tgpg --keyserver ha.pool.sks-keyservers.net --recv-keys \"$GPG_KEY\" && \\\n\tgpg --batch --verify python.tar.xz.asc python.tar.xz && \\\n\trm -r \"$GNUPGHOME\" python.tar.xz.asc && \\\n\tmkdir -p /usr/src/python && \\\n\ttar -xJC /usr/src/python --strip-components=1 -f python.tar.xz && \\\n\trm python.tar.xz && \\\n\tcd /usr/src/python && \\\n\tgnuArch=\"$(dpkg-architecture -qDEB_BUILD_GNU_TYPE)\" && \\\n\t./configure \t\t--build=\"$gnuArch\" \t\t--enable-shared \t\t--enable-unicode=ucs4 && \\\n\tmake -j \"$(nproc)\" && \\\n\tmake install && \\\n\tldconfig && \\\n\tapt-get purge -y --auto-remove $buildDeps && \\\n\tfind /usr/local -depth \t\t\\( \t\t\t\\( -type d -a -name test -o -name tests \\) \t\t\t-o \t\t\t\\( -type f -a -name '*.pyc' -o -name '*.pyo' \\) \t\t\\) -exec rm -rf '{}' + && \\\n\trm -rf /usr/src/python",
+          "system_commands": [
+            "set -ex",
+            "buildDeps=' dpkg-dev tcl-dev tk-dev '",
+            "apt-get update",
+            "apt-get install -y $buildDeps --no-install-recommends",
+            "rm -rf /var/lib/apt/lists/*",
+            "wget -O python.tar.xz \"https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz\"",
+            "wget -O python.tar.xz.asc \"https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc\"",
+            "export GNUPGHOME=\"$(mktemp -d)\"",
+            "gpg --keyserver ha.pool.sks-keyservers.net --recv-keys \"$GPG_KEY\"",
+            "gpg --batch --verify python.tar.xz.asc python.tar.xz",
+            "rm -r \"$GNUPGHOME\" python.tar.xz.asc",
+            "mkdir -p /usr/src/python",
+            "tar -xJC /usr/src/python --strip-components=1 -f python.tar.xz",
+            "rm python.tar.xz",
+            "cd /usr/src/python",
+            "gnuArch=\"$(dpkg-architecture -qDEB_BUILD_GNU_TYPE)\"",
+            "./configure --build=\"$gnuArch\" --enable-shared --enable-unicode=ucs4",
+            "make -j \"$(nproc)\"",
+            "make install",
+            "ldconfig",
+            "apt-get purge -y --auto-remove $buildDeps",
+            "find /usr/local -depth ( ( -type d -a -name test -o -name tests ) -o ( -type f -a -name '*.pyc' -o -name '*.pyo' ) ) -exec rm -rf '{}' +",
+            "rm -rf /usr/src/python"
+          ]
+        },
+        {
+          "type": "ENV",
+          "time": "2017-05-11T21:45:21Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "PYTHON_PIP_VERSION=9.0.1",
+          "command_snippet": "ENV PYTHON_PIP_VERSION=9.0.1",
+          "command_all": "ENV PYTHON_PIP_VERSION=9.0.1"
+        },
+        {
+          "type": "RUN",
+          "time": "2017-05-11T21:45:26Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 5254086,
+          "size_human": "5.3 MB",
+          "command_snippet": "RUN set -ex; \t\twget -O get-pip.py 'https://b...",
+          "command_all": "RUN set -ex; \t\twget -O get-pip.py 'https://bootstrap.pypa.io/get-pip.py'; \t\tpython get-pip.py \t\t--disable-pip-version-check \t\t--no-cache-dir \t\t\"pip==$PYTHON_PIP_VERSION\" \t; \tpip --version; \t\tfind /usr/local -depth \t\t\\( \t\t\t\\( -type d -a -name test -o -name tests \\) \t\t\t-o \t\t\t\\( -type f -a -name '*.pyc' -o -name '*.pyo' \\) \t\t\\) -exec rm -rf '{}' +; \trm -f get-pip.py",
+          "system_commands": [
+            "set -ex",
+            "wget -O get-pip.py 'https://bootstrap.pypa.io/get-pip.py'",
+            "python get-pip.py --disable-pip-version-check --no-cache-dir \"pip==$PYTHON_PIP_VERSION\"",
+            "pip --version",
+            "find /usr/local -depth ( ( -type d -a -name test -o -name tests ) -o ( -type f -a -name '*.pyc' -o -name '*.pyo' ) ) -exec rm -rf '{}' +",
+            "rm -f get-pip.py"
+          ]
+        },
+        {
+          "type": "RUN",
+          "time": "2017-05-11T21:45:28Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 6371666,
+          "size_human": "6.4 MB",
+          "command_snippet": "RUN pip install --no-cache-dir virtualenv",
+          "command_all": "RUN pip install --no-cache-dir virtualenv",
+          "system_commands": [
+            "pip install --no-cache-dir virtualenv"
+          ]
+        },
+        {
+          "type": "CMD",
+          "time": "2017-05-11T21:45:29Z",
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"python2\"]",
+          "command_snippet": "CMD [\"python2\"]",
+          "command_all": "CMD [\"python2\"]"
+        },
+        {
+          "type": "RUN",
+          "time": "2017-05-24T09:07:44Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 39112561,
+          "size_human": "39 MB",
+          "command_snippet": "RUN pip install pyzmq locustio faker",
+          "command_all": "RUN pip install pyzmq locustio faker",
+          "system_commands": [
+            "pip install pyzmq locustio faker"
+          ]
+        },
+        {
+          "type": "ADD",
+          "time": "2017-05-24T09:07:44Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 871,
+          "size_human": "871 B",
+          "params": "file:9741e0e38cfd3376a387cd46e8851f35a9f38e75cba7cebea5551a1eedbe17bd in /config/locustfile.py",
+          "command_snippet": "ADD file:9741e0e38cfd3376a387cd46e8851f35a9f...",
+          "command_all": "ADD file:9741e0e38cfd3376a387cd46e8851f35a9f38e75cba7cebea5551a1eedbe17bd /config/locustfile.py",
+          "target": "/config/locustfile.py",
+          "source_type": "file"
+        },
+        {
+          "type": "ADD",
+          "time": "2017-05-24T09:07:45Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 1934,
+          "size_human": "1.9 kB",
+          "params": "file:a3bf96ff1e2fe996d161641e8535e9160c1fed805717b2c413e2ebfc62a18265 in /usr/local/bin/runLocust.sh",
+          "command_snippet": "ADD file:a3bf96ff1e2fe996d161641e8535e9160c1...",
+          "command_all": "ADD file:a3bf96ff1e2fe996d161641e8535e9160c1fed805717b2c413e2ebfc62a18265 /usr/local/bin/runLocust.sh",
+          "target": "/usr/local/bin/runLocust.sh",
+          "source_type": "file"
+        },
+        {
+          "type": "ENV",
+          "time": "2017-05-24T09:07:45Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "LOCUST_FILE=/config/locustfile.py",
+          "command_snippet": "ENV LOCUST_FILE=/config/locustfile.py",
+          "command_all": "ENV LOCUST_FILE=/config/locustfile.py"
+        },
+        {
+          "type": "EXPOSE",
+          "time": "2017-05-24T09:07:45Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "8089/tcp",
+          "command_snippet": "EXPOSE 8089/tcp",
+          "command_all": "EXPOSE 8089/tcp"
+        },
+        {
+          "type": "ENTRYPOINT",
+          "time": "2017-05-24T09:07:45Z",
+          "is_last_instruction": true,
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": true,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"/usr/local/bin/runLocust.sh\"]",
+          "command_snippet": "ENTRYPOINT [\"/usr/local/bin/runLocust.sh\"]",
+          "command_all": "ENTRYPOINT [\"/usr/local/bin/runLocust.sh\"]",
+          "raw_tags": [
+            "weaveworksdemos/load-test:0.1.1",
+            "weaveworksdemos/load-test:latest"
+          ]
+        }
+      ]
+    }
+  ]
+}

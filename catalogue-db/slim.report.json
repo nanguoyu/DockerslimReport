@@ -1,0 +1,371 @@
+{
+  "version": "1.0",
+  "engine": "linux|Transformer|1.36.4|8e0e0a59720bb95c708c046cf9ec71b4939803da|2021-09-07_08:07:15AM",
+  "containerized": false,
+  "host_distro": {
+    "name": "Ubuntu",
+    "version": "18.04",
+    "display_name": "Ubuntu 18.04.5 LTS"
+  },
+  "type": "build",
+  "state": "done",
+  "target_reference": "weaveworksdemos/catalogue-db:0.3.0",
+  "system": {
+    "type": "Linux",
+    "release": "4.15.0-156-generic",
+    "distro": {
+      "name": "Debian GNU/Linux",
+      "version": "8",
+      "display_name": "Debian GNU/Linux 8 (jessie)"
+    }
+  },
+  "source_image": {
+    "identity": {
+      "id": "sha256:9d0c5eb88949dc8a8896db19330770f109fae9c9426d3c2fa9cf84e68b40ac2e",
+      "tags": [
+        "0.3.0"
+      ],
+      "names": [
+        "weaveworksdemos/catalogue-db:0.3.0"
+      ],
+      "digests": [
+        "sha256:7ba74ec9adf88f6625b8d85d3323d1ee5232b39877e1590021ea485cf9457251"
+      ],
+      "full_digests": [
+        "weaveworksdemos/catalogue-db@sha256:7ba74ec9adf88f6625b8d85d3323d1ee5232b39877e1590021ea485cf9457251"
+      ]
+    },
+    "size": 400161654,
+    "size_human": "400 MB",
+    "create_time": "2016-12-23T10:54:01Z",
+    "docker_version": "1.12.3",
+    "architecture": "amd64",
+    "exposed_ports": [
+      "3306/tcp"
+    ],
+    "os": "linux",
+    "volumes": [
+      "/var/lib/mysql"
+    ],
+    "env_vars": [
+      "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "GOSU_VERSION=1.7",
+      "MYSQL_MAJOR=5.7",
+      "MYSQL_VERSION=5.7.17-1debian8"
+    ],
+    "container_entry": {
+      "exe_path": ""
+    }
+  },
+  "minified_image_size": 43935388,
+  "minified_image_size_human": "44 MB",
+  "minified_image": "weaveworksdemos/catalogue-db.slim",
+  "minified_image_has_data": true,
+  "minified_by": 9.107957667290886,
+  "artifact_location": "/tmp/docker-slim-state/.docker-slim-state/images/9d0c5eb88949dc8a8896db19330770f109fae9c9426d3c2fa9cf84e68b40ac2e/artifacts",
+  "container_report_name": "creport.json",
+  "seccomp_profile_name": "weaveworksdemos-catalogue-db-seccomp.json",
+  "apparmor_profile_name": "weaveworksdemos-catalogue-db-apparmor-profile",
+  "image_stack": [
+    {
+      "is_top_image": true,
+      "id": "sha256:9d0c5eb88949dc8a8896db19330770f109fae9c9426d3c2fa9cf84e68b40ac2e",
+      "full_name": "weaveworksdemos/catalogue-db:0.3.0",
+      "repo_name": "weaveworksdemos/catalogue-db",
+      "version_tag": "0.3.0",
+      "raw_tags": [
+        "weaveworksdemos/catalogue-db:0.3.0"
+      ],
+      "create_time": "2016-12-23T10:54:01Z",
+      "new_size": 400161654,
+      "new_size_human": "400 MB",
+      "instructions": [
+        {
+          "type": "ADD",
+          "time": "2016-12-13T22:10:59Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 123057319,
+          "size_human": "123 MB",
+          "params": "file:1d214d2782eaccc743b8d683ccecf2f87f12a0ecdfbcd6fdf4943ce616f23870 in /",
+          "command_snippet": "ADD file:1d214d2782eaccc743b8d683ccecf2f87f1...",
+          "command_all": "ADD file:1d214d2782eaccc743b8d683ccecf2f87f12a0ecdfbcd6fdf4943ce616f23870 /",
+          "target": "/",
+          "source_type": "file"
+        },
+        {
+          "type": "CMD",
+          "time": "2016-12-13T22:10:59Z",
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"/bin/bash\"]",
+          "command_snippet": "CMD [\"/bin/bash\"]",
+          "command_all": "CMD [\"/bin/bash\"]"
+        },
+        {
+          "type": "RUN",
+          "time": "2016-12-14T01:00:10Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 330368,
+          "size_human": "330 kB",
+          "command_snippet": "RUN groupadd -r mysql && \\\n\tuseradd -r -g my...",
+          "command_all": "RUN groupadd -r mysql && \\\n\tuseradd -r -g mysql mysql",
+          "system_commands": [
+            "groupadd -r mysql",
+            "useradd -r -g mysql mysql"
+          ]
+        },
+        {
+          "type": "ENV",
+          "time": "2016-12-14T01:00:11Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "GOSU_VERSION=1.7",
+          "command_snippet": "ENV GOSU_VERSION=1.7",
+          "command_all": "ENV GOSU_VERSION=1.7"
+        },
+        {
+          "type": "RUN",
+          "time": "2016-12-14T01:00:29Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 4255294,
+          "size_human": "4.3 MB",
+          "command_snippet": "RUN set -x && \\\n\tapt-get update && \\\n\tapt-ge...",
+          "command_all": "RUN set -x && \\\n\tapt-get update && \\\n\tapt-get install -y --no-install-recommends ca-certificates wget && \\\n\trm -rf /var/lib/apt/lists/* && \\\n\twget -O /usr/local/bin/gosu \"https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$(dpkg --print-architecture)\" && \\\n\twget -O /usr/local/bin/gosu.asc \"https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$(dpkg --print-architecture).asc\" && \\\n\texport GNUPGHOME=\"$(mktemp -d)\" && \\\n\tgpg --keyserver ha.pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4 && \\\n\tgpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu && \\\n\trm -r \"$GNUPGHOME\" /usr/local/bin/gosu.asc && \\\n\tchmod +x /usr/local/bin/gosu && \\\n\tgosu nobody true && \\\n\tapt-get purge -y --auto-remove ca-certificates wget",
+          "system_commands": [
+            "set -x",
+            "apt-get update",
+            "apt-get install -y --no-install-recommends ca-certificates wget",
+            "rm -rf /var/lib/apt/lists/*",
+            "wget -O /usr/local/bin/gosu \"https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$(dpkg --print-architecture)\"",
+            "wget -O /usr/local/bin/gosu.asc \"https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$(dpkg --print-architecture).asc\"",
+            "export GNUPGHOME=\"$(mktemp -d)\"",
+            "gpg --keyserver ha.pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4",
+            "gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu",
+            "rm -r \"$GNUPGHOME\" /usr/local/bin/gosu.asc",
+            "chmod +x /usr/local/bin/gosu",
+            "gosu nobody true",
+            "apt-get purge -y --auto-remove ca-certificates wget"
+          ]
+        },
+        {
+          "type": "RUN",
+          "time": "2016-12-14T01:00:30Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "command_snippet": "RUN mkdir /docker-entrypoint-initdb.d",
+          "command_all": "RUN mkdir /docker-entrypoint-initdb.d",
+          "system_commands": [
+            "mkdir /docker-entrypoint-initdb.d"
+          ]
+        },
+        {
+          "type": "RUN",
+          "time": "2016-12-14T02:47:50Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 32920718,
+          "size_human": "33 MB",
+          "command_snippet": "RUN apt-get update && \\\n\tapt-get install -y ...",
+          "command_all": "RUN apt-get update && \\\n\tapt-get install -y perl pwgen --no-install-recommends && \\\n\trm -rf /var/lib/apt/lists/*",
+          "system_commands": [
+            "apt-get update",
+            "apt-get install -y perl pwgen --no-install-recommends",
+            "rm -rf /var/lib/apt/lists/*"
+          ]
+        },
+        {
+          "type": "RUN",
+          "time": "2016-12-14T02:47:52Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 20809,
+          "size_human": "21 kB",
+          "command_snippet": "RUN apt-key adv --keyserver ha.pool.sks-keys...",
+          "command_all": "RUN apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys A4A9406876FCBD3C456770C88C718D3B5072E1F5",
+          "system_commands": [
+            "apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys A4A9406876FCBD3C456770C88C718D3B5072E1F5"
+          ]
+        },
+        {
+          "type": "ENV",
+          "time": "2016-12-14T02:47:53Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "MYSQL_MAJOR=5.7",
+          "command_snippet": "ENV MYSQL_MAJOR=5.7",
+          "command_all": "ENV MYSQL_MAJOR=5.7"
+        },
+        {
+          "type": "ENV",
+          "time": "2016-12-14T02:47:53Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "MYSQL_VERSION=5.7.17-1debian8",
+          "command_snippet": "ENV MYSQL_VERSION=5.7.17-1debian8",
+          "command_all": "ENV MYSQL_VERSION=5.7.17-1debian8"
+        },
+        {
+          "type": "RUN",
+          "time": "2016-12-14T02:47:54Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 55,
+          "size_human": "55 B",
+          "command_snippet": "RUN echo \"deb http://repo.mysql.com/apt/debi...",
+          "command_all": "RUN echo \"deb http://repo.mysql.com/apt/debian/ jessie mysql-${MYSQL_MAJOR}\" > /etc/apt/sources.list.d/mysql.list",
+          "system_commands": [
+            "echo \"deb http://repo.mysql.com/apt/debian/ jessie mysql-${MYSQL_MAJOR}\" > /etc/apt/sources.list.d/mysql.list"
+          ]
+        },
+        {
+          "type": "RUN",
+          "time": "2016-12-14T02:48:17Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 239565962,
+          "size_human": "240 MB",
+          "command_snippet": "RUN { \t\techo mysql-community-server mysql-co...",
+          "command_all": "RUN { \t\techo mysql-community-server mysql-community-server/data-dir select ''; \t\techo mysql-community-server mysql-community-server/root-pass password ''; \t\techo mysql-community-server mysql-community-server/re-root-pass password ''; \t\techo mysql-community-server mysql-community-server/remove-test-db select false; \t} | debconf-set-selections && \\\n\tapt-get update && \\\n\tapt-get install -y mysql-server=\"${MYSQL_VERSION}\" && \\\n\trm -rf /var/lib/apt/lists/* && \\\n\trm -rf /var/lib/mysql && \\\n\tmkdir -p /var/lib/mysql /var/run/mysqld && \\\n\tchown -R mysql:mysql /var/lib/mysql /var/run/mysqld && \\\n\tchmod 777 /var/run/mysqld",
+          "system_commands": [
+            "{ echo mysql-community-server mysql-community-server/data-dir select ''; echo mysql-community-server mysql-community-server/root-pass password ''; echo mysql-community-server mysql-community-server/re-root-pass password ''; echo mysql-community-server mysql-community-server/remove-test-db select false; } | debconf-set-selections",
+            "apt-get update",
+            "apt-get install -y mysql-server=\"${MYSQL_VERSION}\"",
+            "rm -rf /var/lib/apt/lists/*",
+            "rm -rf /var/lib/mysql",
+            "mkdir -p /var/lib/mysql /var/run/mysqld",
+            "chown -R mysql:mysql /var/lib/mysql /var/run/mysqld",
+            "chmod 777 /var/run/mysqld"
+          ]
+        },
+        {
+          "type": "RUN",
+          "time": "2016-12-14T02:48:23Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 1234,
+          "size_human": "1.2 kB",
+          "command_snippet": "RUN sed -Ei 's/^(bind-address|log)/#&/' /etc...",
+          "command_all": "RUN sed -Ei 's/^(bind-address|log)/#&/' /etc/mysql/mysql.conf.d/mysqld.cnf && \\\n\techo '[mysqld]\\nskip-host-cache\\nskip-name-resolve' > /etc/mysql/conf.d/docker.cnf",
+          "system_commands": [
+            "sed -Ei 's/^(bind-address|log)/#&/' /etc/mysql/mysql.conf.d/mysqld.cnf",
+            "echo '[mysqld]nskip-host-cachenskip-name-resolve' > /etc/mysql/conf.d/docker.cnf"
+          ]
+        },
+        {
+          "type": "VOLUME",
+          "time": "2016-12-14T02:48:24Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[/var/lib/mysql]",
+          "command_snippet": "VOLUME [/var/lib/mysql]",
+          "command_all": "VOLUME [/var/lib/mysql]"
+        },
+        {
+          "type": "COPY",
+          "time": "2016-12-14T02:48:24Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 4685,
+          "size_human": "4.7 kB",
+          "params": "file:fc6fa63e59403864ccd3dc0d09d92a9b3feb07f725587a6f97309cf96bb52a6b in /usr/local/bin/",
+          "command_snippet": "COPY file:fc6fa63e59403864ccd3dc0d09d92a9b3f...",
+          "command_all": "COPY file:fc6fa63e59403864ccd3dc0d09d92a9b3feb07f725587a6f97309cf96bb52a6b /usr/local/bin/",
+          "target": "/usr/local/bin/",
+          "source_type": "file"
+        },
+        {
+          "type": "RUN",
+          "time": "2016-12-14T02:48:25Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 34,
+          "size_human": "34 B",
+          "command_snippet": "RUN ln -s usr/local/bin/docker-entrypoint.sh...",
+          "command_all": "RUN ln -s usr/local/bin/docker-entrypoint.sh /entrypoint.sh # backwards compat",
+          "system_commands": [
+            "ln -s usr/local/bin/docker-entrypoint.sh /entrypoint.sh # backwards compat"
+          ]
+        },
+        {
+          "type": "ENTRYPOINT",
+          "time": "2016-12-14T02:48:26Z",
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"docker-entrypoint.sh\"]",
+          "command_snippet": "ENTRYPOINT [\"docker-entrypoint.sh\"]",
+          "command_all": "ENTRYPOINT [\"docker-entrypoint.sh\"]"
+        },
+        {
+          "type": "EXPOSE",
+          "time": "2016-12-14T02:48:26Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "3306/tcp",
+          "command_snippet": "EXPOSE 3306/tcp",
+          "command_all": "EXPOSE 3306/tcp"
+        },
+        {
+          "type": "CMD",
+          "time": "2016-12-14T02:48:27Z",
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"mysqld\"]",
+          "command_snippet": "CMD [\"mysqld\"]",
+          "command_all": "CMD [\"mysqld\"]"
+        },
+        {
+          "type": "COPY",
+          "time": "2016-12-23T10:54:01Z",
+          "is_last_instruction": true,
+          "is_nop": true,
+          "local_image_exists": true,
+          "layer_index": 0,
+          "size": 5176,
+          "size_human": "5.2 kB",
+          "params": "file:b9ed7d886ea2cca2fd16b10b4344aa12306be20eba64dc24bf189e79c8f5de68 in /docker-entrypoint-initdb.d/",
+          "command_snippet": "COPY file:b9ed7d886ea2cca2fd16b10b4344aa1230...",
+          "command_all": "COPY file:b9ed7d886ea2cca2fd16b10b4344aa12306be20eba64dc24bf189e79c8f5de68 /docker-entrypoint-initdb.d/",
+          "raw_tags": [
+            "weaveworksdemos/catalogue-db:0.3.0"
+          ],
+          "target": "/docker-entrypoint-initdb.d/",
+          "source_type": "file"
+        }
+      ]
+    }
+  ]
+}

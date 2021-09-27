@@ -1,0 +1,277 @@
+{
+  "version": "1.0",
+  "engine": "linux|Transformer|1.36.4|8e0e0a59720bb95c708c046cf9ec71b4939803da|2021-09-07_08:07:15AM",
+  "containerized": false,
+  "host_distro": {
+    "name": "Ubuntu",
+    "version": "18.04",
+    "display_name": "Ubuntu 18.04.5 LTS"
+  },
+  "type": "build",
+  "state": "done",
+  "target_reference": "weaveworksdemos/catalogue:0.3.5",
+  "system": {
+    "type": "Linux",
+    "release": "4.15.0-156-generic",
+    "distro": {
+      "name": "Alpine Linux",
+      "version": "3.4.6",
+      "display_name": "Alpine Linux v3.4"
+    }
+  },
+  "source_image": {
+    "identity": {
+      "id": "sha256:0bd359b6d6e803db58b0474e9b1fa78a5f9e4f0d4abf8cdc283037c586b3bbad",
+      "tags": [
+        "0.3.5"
+      ],
+      "names": [
+        "weaveworksdemos/catalogue:0.3.5"
+      ],
+      "digests": [
+        "sha256:0147a65b7116569439eefb1a6dbed455fe022464ef70e0c3cab75bc4a226b39b"
+      ],
+      "full_digests": [
+        "weaveworksdemos/catalogue@sha256:0147a65b7116569439eefb1a6dbed455fe022464ef70e0c3cab75bc4a226b39b"
+      ]
+    },
+    "size": 41221511,
+    "size_human": "41 MB",
+    "create_time": "2017-03-22T09:07:42Z",
+    "docker_version": "1.12.3",
+    "architecture": "amd64",
+    "user": "myuser",
+    "exposed_ports": [
+      "80/tcp"
+    ],
+    "os": "linux",
+    "labels": {
+      "org.label-schema.build-date": "2017-03-22T09:05:57+0000",
+      "org.label-schema.description": "REST API for Catalogue service",
+      "org.label-schema.name": "Socks Shop: Catalogue",
+      "org.label-schema.schema-version": "1.0",
+      "org.label-schema.url": "https://github.com/microservices-demo/catalogue",
+      "org.label-schema.vcs-ref": "93452255c62cac6e44f5d86376d7cb3c5409e162",
+      "org.label-schema.vcs-url": "github.com:microservices-demo/catalogue.git",
+      "org.label-schema.vendor": "Weaveworks",
+      "org.label-schema.version": "0.0.2-SNAPSHOT"
+    },
+    "env_vars": [
+      "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "SERVICE_USER=myuser",
+      "SERVICE_UID=10001",
+      "SERVICE_GROUP=mygroup",
+      "SERVICE_GID=10001"
+    ],
+    "container_entry": {
+      "exe_path": ""
+    }
+  },
+  "minified_image_size": 17781972,
+  "minified_image_size_human": "18 MB",
+  "minified_image": "weaveworksdemos/catalogue.slim",
+  "minified_image_has_data": true,
+  "minified_by": 2.3181630811250855,
+  "artifact_location": "/tmp/docker-slim-state/.docker-slim-state/images/0bd359b6d6e803db58b0474e9b1fa78a5f9e4f0d4abf8cdc283037c586b3bbad/artifacts",
+  "container_report_name": "creport.json",
+  "seccomp_profile_name": "weaveworksdemos-catalogue-seccomp.json",
+  "apparmor_profile_name": "weaveworksdemos-catalogue-apparmor-profile",
+  "image_stack": [
+    {
+      "is_top_image": true,
+      "id": "sha256:0bd359b6d6e803db58b0474e9b1fa78a5f9e4f0d4abf8cdc283037c586b3bbad",
+      "full_name": "weaveworksdemos/catalogue:0.3.5",
+      "repo_name": "weaveworksdemos/catalogue",
+      "version_tag": "0.3.5",
+      "raw_tags": [
+        "weaveworksdemos/catalogue:0.3.5"
+      ],
+      "create_time": "2017-03-22T09:07:42Z",
+      "new_size": 41221511,
+      "new_size_human": "41 MB",
+      "instructions": [
+        {
+          "type": "ADD",
+          "time": "2017-03-03T20:32:21Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 4807124,
+          "size_human": "4.8 MB",
+          "params": "file:3df55c321c1c8d73f22bc69240c0764290d6cb293da46ba8f94ed25473fb5853 in /",
+          "command_snippet": "ADD file:3df55c321c1c8d73f22bc69240c0764290d...",
+          "command_all": "ADD file:3df55c321c1c8d73f22bc69240c0764290d6cb293da46ba8f94ed25473fb5853 /",
+          "target": "/",
+          "source_type": "file"
+        },
+        {
+          "type": "ENV",
+          "time": "2017-03-22T09:07:35Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "SERVICE_USER=myuser SERVICE_UID=10001 SERVICE_GROUP=mygroup SERVICE_GID=10001",
+          "command_snippet": "ENV SERVICE_USER=myuser SERVICE_UID=10001 SE...",
+          "command_all": "ENV SERVICE_USER=myuser SERVICE_UID=10001 SERVICE_GROUP=mygroup SERVICE_GID=10001"
+        },
+        {
+          "type": "RUN",
+          "time": "2017-03-22T09:07:39Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 854525,
+          "size_human": "854 kB",
+          "command_snippet": "RUN addgroup -g ${SERVICE_GID} ${SERVICE_GRO...",
+          "command_all": "RUN addgroup -g ${SERVICE_GID} ${SERVICE_GROUP} && \\\n\tadduser -g \"${SERVICE_NAME} user\" -D -H -G ${SERVICE_GROUP} -s /sbin/nologin -u ${SERVICE_UID} ${SERVICE_USER} && \\\n\tapk add --update libcap",
+          "system_commands": [
+            "addgroup -g ${SERVICE_GID} ${SERVICE_GROUP}",
+            "adduser -g \"${SERVICE_NAME} user\" -D -H -G ${SERVICE_GROUP} -s /sbin/nologin -u ${SERVICE_UID} ${SERVICE_USER}",
+            "apk add --update libcap"
+          ]
+        },
+        {
+          "type": "WORKDIR",
+          "time": "2017-03-22T09:07:39Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "/",
+          "command_snippet": "WORKDIR /",
+          "command_all": "WORKDIR /",
+          "system_commands": [
+            "mkdir -p /"
+          ]
+        },
+        {
+          "type": "EXPOSE",
+          "time": "2017-03-22T09:07:40Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "80/tcp",
+          "command_snippet": "EXPOSE 80/tcp",
+          "command_all": "EXPOSE 80/tcp"
+        },
+        {
+          "type": "COPY",
+          "time": "2017-03-22T09:07:40Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 14257173,
+          "size_human": "14 MB",
+          "params": "file:d9dd033a5b7bf40442aeb91d25e9f5b9de54843e8083dcdc5bdfb9ed0373792d in /",
+          "command_snippet": "COPY file:d9dd033a5b7bf40442aeb91d25e9f5b9de...",
+          "command_all": "COPY file:d9dd033a5b7bf40442aeb91d25e9f5b9de54843e8083dcdc5bdfb9ed0373792d /",
+          "target": "/",
+          "source_type": "file"
+        },
+        {
+          "type": "COPY",
+          "time": "2017-03-22T09:07:40Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 3522758,
+          "size_human": "3.5 MB",
+          "params": "dir:e560da421c5fa4d36a6b8e59d5b52a7e8b053b8a06272f6fb124acdd7728d11b in /images/",
+          "command_snippet": "COPY dir:e560da421c5fa4d36a6b8e59d5b52a7e8b0...",
+          "command_all": "COPY dir:e560da421c5fa4d36a6b8e59d5b52a7e8b053b8a06272f6fb124acdd7728d11b /images/",
+          "target": "/images/",
+          "source_type": "dir"
+        },
+        {
+          "type": "RUN",
+          "time": "2017-03-22T09:07:41Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 17779931,
+          "size_human": "18 MB",
+          "command_snippet": "RUN chmod +x /app && \\\n\tchown -R ${SERVICE_U...",
+          "command_all": "RUN chmod +x /app && \\\n\tchown -R ${SERVICE_USER}:${SERVICE_GROUP} /app /images && \\\n\tsetcap 'cap_net_bind_service=+ep' /app",
+          "system_commands": [
+            "chmod +x /app",
+            "chown -R ${SERVICE_USER}:${SERVICE_GROUP} /app /images",
+            "setcap 'cap_net_bind_service=+ep' /app"
+          ]
+        },
+        {
+          "type": "USER",
+          "time": "2017-03-22T09:07:41Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[myuser]",
+          "command_snippet": "USER [myuser]",
+          "command_all": "USER [myuser]"
+        },
+        {
+          "type": "ARG",
+          "time": "2017-03-22T09:07:41Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "BUILD_DATE",
+          "command_snippet": "ARG BUILD_DATE",
+          "command_all": "ARG BUILD_DATE"
+        },
+        {
+          "type": "ARG",
+          "time": "2017-03-22T09:07:41Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "BUILD_VERSION",
+          "command_snippet": "ARG BUILD_VERSION",
+          "command_all": "ARG BUILD_VERSION"
+        },
+        {
+          "type": "ARG",
+          "time": "2017-03-22T09:07:41Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "COMMIT",
+          "command_snippet": "ARG COMMIT",
+          "command_all": "ARG COMMIT"
+        },
+        {
+          "type": "LABEL",
+          "time": "2017-03-22T09:07:42Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "org.label-schema.vendor=Weaveworks org.label-schema.build-date=2017-03-22T09:05:57+0000 org.label-schema.version=0.0.2-SNAPSHOT org.label-schema.name=Socks Shop: Catalogue org.label-schema.description=REST API for Catalogue service org.label-schema.url=https://github.com/microservices-demo/catalogue org.label-schema.vcs-url=github.com:microservices-demo/catalogue.git org.label-schema.vcs-ref=93452255c62cac6e44f5d86376d7cb3c5409e162 org.label-schema.schema-version=1.0",
+          "command_snippet": "LABEL org.label-schema.vendor=Weaveworks org...",
+          "command_all": "LABEL org.label-schema.vendor=Weaveworks org.label-schema.build-date=2017-03-22T09:05:57+0000 org.label-schema.version=0.0.2-SNAPSHOT org.label-schema.name=Socks Shop: Catalogue org.label-schema.description=REST API for Catalogue service org.label-schema.url=https://github.com/microservices-demo/catalogue org.label-schema.vcs-url=github.com:microservices-demo/catalogue.git org.label-schema.vcs-ref=93452255c62cac6e44f5d86376d7cb3c5409e162 org.label-schema.schema-version=1.0"
+        },
+        {
+          "type": "CMD",
+          "time": "2017-03-22T09:07:42Z",
+          "is_last_instruction": true,
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": true,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"/app\",\"-port=80\"]",
+          "command_snippet": "CMD [\"/app\",\"-port=80\"]",
+          "command_all": "CMD [\"/app\",\"-port=80\"]",
+          "raw_tags": [
+            "weaveworksdemos/catalogue:0.3.5"
+          ]
+        }
+      ]
+    }
+  ]
+}

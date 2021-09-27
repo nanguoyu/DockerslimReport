@@ -1,0 +1,412 @@
+{
+  "version": "1.0",
+  "engine": "linux|Transformer|1.36.4|8e0e0a59720bb95c708c046cf9ec71b4939803da|2021-09-07_08:07:15AM",
+  "containerized": false,
+  "host_distro": {
+    "name": "Ubuntu",
+    "version": "18.04",
+    "display_name": "Ubuntu 18.04.5 LTS"
+  },
+  "type": "build",
+  "state": "done",
+  "target_reference": "weaveworksdemos/user-db:0.4.0",
+  "system": {
+    "type": "Linux",
+    "release": "4.15.0-156-generic",
+    "distro": {
+      "name": "Debian GNU/Linux",
+      "version": "8",
+      "display_name": "Debian GNU/Linux 8 (jessie)"
+    }
+  },
+  "source_image": {
+    "identity": {
+      "id": "sha256:196601f91030425db810fa57104b041e414b9b963923ad574e74700c3ea8213e",
+      "tags": [
+        "0.4.0"
+      ],
+      "names": [
+        "weaveworksdemos/user-db:0.4.0"
+      ],
+      "digests": [
+        "sha256:b43f0f8a76e0c908805fcec74d1ad7f4af4d93c4612632bd6dc20a87508e0b68"
+      ],
+      "full_digests": [
+        "weaveworksdemos/user-db@sha256:b43f0f8a76e0c908805fcec74d1ad7f4af4d93c4612632bd6dc20a87508e0b68"
+      ]
+    },
+    "size": 716879935,
+    "size_human": "717 MB",
+    "create_time": "2016-12-23T10:41:18Z",
+    "docker_version": "1.12.3",
+    "architecture": "amd64",
+    "exposed_ports": [
+      "27017/tcp"
+    ],
+    "os": "linux",
+    "volumes": [
+      "/data/configdb",
+      "/data/db",
+      "/data/db-users"
+    ],
+    "env_vars": [
+      "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "GOSU_VERSION=1.7",
+      "MONGO_MAJOR=3.4",
+      "MONGO_VERSION=3.4.1",
+      "MONGO_PACKAGE=mongodb-org"
+    ],
+    "container_entry": {
+      "exe_path": ""
+    }
+  },
+  "minified_image_size": 65086932,
+  "minified_image_size_human": "65 MB",
+  "minified_image": "nanguoyu/weaveworksdemos-user-db.slim",
+  "minified_image_has_data": true,
+  "minified_by": 11.014191527724797,
+  "artifact_location": "/tmp/docker-slim-state/.docker-slim-state/images/196601f91030425db810fa57104b041e414b9b963923ad574e74700c3ea8213e/artifacts",
+  "container_report_name": "creport.json",
+  "seccomp_profile_name": "weaveworksdemos-user-db-seccomp.json",
+  "apparmor_profile_name": "weaveworksdemos-user-db-apparmor-profile",
+  "image_stack": [
+    {
+      "is_top_image": true,
+      "id": "sha256:196601f91030425db810fa57104b041e414b9b963923ad574e74700c3ea8213e",
+      "full_name": "weaveworksdemos/user-db:0.4.0",
+      "repo_name": "weaveworksdemos/user-db",
+      "version_tag": "0.4.0",
+      "raw_tags": [
+        "weaveworksdemos/user-db:0.4.0"
+      ],
+      "create_time": "2016-12-23T10:41:18Z",
+      "new_size": 716879935,
+      "new_size_human": "717 MB",
+      "instructions": [
+        {
+          "type": "ADD",
+          "time": "2016-12-13T22:10:59Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 123057319,
+          "size_human": "123 MB",
+          "params": "file:1d214d2782eaccc743b8d683ccecf2f87f12a0ecdfbcd6fdf4943ce616f23870 in /",
+          "command_snippet": "ADD file:1d214d2782eaccc743b8d683ccecf2f87f1...",
+          "command_all": "ADD file:1d214d2782eaccc743b8d683ccecf2f87f12a0ecdfbcd6fdf4943ce616f23870 /",
+          "target": "/",
+          "source_type": "file"
+        },
+        {
+          "type": "CMD",
+          "time": "2016-12-13T22:10:59Z",
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"/bin/bash\"]",
+          "command_snippet": "CMD [\"/bin/bash\"]",
+          "command_all": "CMD [\"/bin/bash\"]"
+        },
+        {
+          "type": "RUN",
+          "time": "2016-12-14T01:03:39Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 330382,
+          "size_human": "330 kB",
+          "command_snippet": "RUN groupadd -r mongodb && \\\n\tuseradd -r -g ...",
+          "command_all": "RUN groupadd -r mongodb && \\\n\tuseradd -r -g mongodb mongodb",
+          "system_commands": [
+            "groupadd -r mongodb",
+            "useradd -r -g mongodb mongodb"
+          ]
+        },
+        {
+          "type": "RUN",
+          "time": "2016-12-14T01:03:46Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 437961,
+          "size_human": "438 kB",
+          "command_snippet": "RUN apt-get update && \\\n\tapt-get install -y ...",
+          "command_all": "RUN apt-get update && \\\n\tapt-get install -y --no-install-recommends \t\tnumactl && \\\n\trm -rf /var/lib/apt/lists/*",
+          "system_commands": [
+            "apt-get update",
+            "apt-get install -y --no-install-recommends numactl",
+            "rm -rf /var/lib/apt/lists/*"
+          ]
+        },
+        {
+          "type": "ENV",
+          "time": "2016-12-14T01:03:46Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "GOSU_VERSION=1.7",
+          "command_snippet": "ENV GOSU_VERSION=1.7",
+          "command_all": "ENV GOSU_VERSION=1.7"
+        },
+        {
+          "type": "RUN",
+          "time": "2016-12-14T01:04:04Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 4260058,
+          "size_human": "4.3 MB",
+          "command_snippet": "RUN set -x && \\\n\tapt-get update && \\\n\tapt-ge...",
+          "command_all": "RUN set -x && \\\n\tapt-get update && \\\n\tapt-get install -y --no-install-recommends ca-certificates wget && \\\n\trm -rf /var/lib/apt/lists/* && \\\n\twget -O /usr/local/bin/gosu \"https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$(dpkg --print-architecture)\" && \\\n\twget -O /usr/local/bin/gosu.asc \"https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$(dpkg --print-architecture).asc\" && \\\n\texport GNUPGHOME=\"$(mktemp -d)\" && \\\n\tgpg --keyserver ha.pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4 && \\\n\tgpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu && \\\n\trm -r \"$GNUPGHOME\" /usr/local/bin/gosu.asc && \\\n\tchmod +x /usr/local/bin/gosu && \\\n\tgosu nobody true && \\\n\tapt-get purge -y --auto-remove ca-certificates wget",
+          "system_commands": [
+            "set -x",
+            "apt-get update",
+            "apt-get install -y --no-install-recommends ca-certificates wget",
+            "rm -rf /var/lib/apt/lists/*",
+            "wget -O /usr/local/bin/gosu \"https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$(dpkg --print-architecture)\"",
+            "wget -O /usr/local/bin/gosu.asc \"https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$(dpkg --print-architecture).asc\"",
+            "export GNUPGHOME=\"$(mktemp -d)\"",
+            "gpg --keyserver ha.pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4",
+            "gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu",
+            "rm -r \"$GNUPGHOME\" /usr/local/bin/gosu.asc",
+            "chmod +x /usr/local/bin/gosu",
+            "gosu nobody true",
+            "apt-get purge -y --auto-remove ca-certificates wget"
+          ]
+        },
+        {
+          "type": "RUN",
+          "time": "2016-12-14T01:04:06Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 1166,
+          "size_human": "1.2 kB",
+          "command_snippet": "RUN apt-key adv --keyserver ha.pool.sks-keys...",
+          "command_all": "RUN apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys 0C49F3730359A14518585931BC711F9BA15703C6",
+          "system_commands": [
+            "apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys 0C49F3730359A14518585931BC711F9BA15703C6"
+          ]
+        },
+        {
+          "type": "ENV",
+          "time": "2016-12-14T01:04:06Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "MONGO_MAJOR=3.4",
+          "command_snippet": "ENV MONGO_MAJOR=3.4",
+          "command_all": "ENV MONGO_MAJOR=3.4"
+        },
+        {
+          "type": "ENV",
+          "time": "2016-12-22T20:34:23Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "MONGO_VERSION=3.4.1",
+          "command_snippet": "ENV MONGO_VERSION=3.4.1",
+          "command_all": "ENV MONGO_VERSION=3.4.1"
+        },
+        {
+          "type": "ENV",
+          "time": "2016-12-22T20:34:24Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "MONGO_PACKAGE=mongodb-org",
+          "command_snippet": "ENV MONGO_PACKAGE=mongodb-org",
+          "command_all": "ENV MONGO_PACKAGE=mongodb-org"
+        },
+        {
+          "type": "RUN",
+          "time": "2016-12-22T20:34:25Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 67,
+          "size_human": "67 B",
+          "command_snippet": "RUN echo \"deb http://repo.mongodb.org/apt/de...",
+          "command_all": "RUN echo \"deb http://repo.mongodb.org/apt/debian jessie/mongodb-org/$MONGO_MAJOR main\" > /etc/apt/sources.list.d/mongodb-org.list",
+          "system_commands": [
+            "echo \"deb http://repo.mongodb.org/apt/debian jessie/mongodb-org/$MONGO_MAJOR main\" > /etc/apt/sources.list.d/mongodb-org.list"
+          ]
+        },
+        {
+          "type": "RUN",
+          "time": "2016-12-22T20:34:42Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 273923815,
+          "size_human": "274 MB",
+          "command_snippet": "RUN set -x && \\\n\tapt-get update && \\\n\tapt-ge...",
+          "command_all": "RUN set -x && \\\n\tapt-get update && \\\n\tapt-get install -y \t\t${MONGO_PACKAGE}=$MONGO_VERSION \t\t${MONGO_PACKAGE}-server=$MONGO_VERSION \t\t${MONGO_PACKAGE}-shell=$MONGO_VERSION \t\t${MONGO_PACKAGE}-mongos=$MONGO_VERSION \t\t${MONGO_PACKAGE}-tools=$MONGO_VERSION && \\\n\trm -rf /var/lib/apt/lists/* && \\\n\trm -rf /var/lib/mongodb && \\\n\tmv /etc/mongod.conf /etc/mongod.conf.orig",
+          "system_commands": [
+            "set -x",
+            "apt-get update",
+            "apt-get install -y ${MONGO_PACKAGE}=$MONGO_VERSION ${MONGO_PACKAGE}-server=$MONGO_VERSION ${MONGO_PACKAGE}-shell=$MONGO_VERSION ${MONGO_PACKAGE}-mongos=$MONGO_VERSION ${MONGO_PACKAGE}-tools=$MONGO_VERSION",
+            "rm -rf /var/lib/apt/lists/*",
+            "rm -rf /var/lib/mongodb",
+            "mv /etc/mongod.conf /etc/mongod.conf.orig"
+          ]
+        },
+        {
+          "type": "RUN",
+          "time": "2016-12-22T20:34:50Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "command_snippet": "RUN mkdir -p /data/db /data/configdb && \\\n\tc...",
+          "command_all": "RUN mkdir -p /data/db /data/configdb && \\\n\tchown -R mongodb:mongodb /data/db /data/configdb",
+          "system_commands": [
+            "mkdir -p /data/db /data/configdb",
+            "chown -R mongodb:mongodb /data/db /data/configdb"
+          ]
+        },
+        {
+          "type": "VOLUME",
+          "time": "2016-12-22T20:34:51Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[/data/db /data/configdb]",
+          "command_snippet": "VOLUME [/data/db /data/configdb]",
+          "command_all": "VOLUME [/data/db /data/configdb]"
+        },
+        {
+          "type": "COPY",
+          "time": "2016-12-22T20:34:52Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 392,
+          "size_human": "392 B",
+          "params": "file:7f1f8bb27f73563768bb938208148a281b70ba028a8d544671abcb276c8f741c in /entrypoint.sh",
+          "command_snippet": "COPY file:7f1f8bb27f73563768bb938208148a281b...",
+          "command_all": "COPY file:7f1f8bb27f73563768bb938208148a281b70ba028a8d544671abcb276c8f741c /entrypoint.sh",
+          "target": "/entrypoint.sh",
+          "source_type": "file"
+        },
+        {
+          "type": "ENTRYPOINT",
+          "time": "2016-12-22T20:34:53Z",
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"/entrypoint.sh\"]",
+          "command_snippet": "ENTRYPOINT [\"/entrypoint.sh\"]",
+          "command_all": "ENTRYPOINT [\"/entrypoint.sh\"]"
+        },
+        {
+          "type": "EXPOSE",
+          "time": "2016-12-22T20:34:53Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "27017/tcp",
+          "command_snippet": "EXPOSE 27017/tcp",
+          "command_all": "EXPOSE 27017/tcp"
+        },
+        {
+          "type": "CMD",
+          "time": "2016-12-22T20:34:54Z",
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"mongod\"]",
+          "command_snippet": "CMD [\"mongod\"]",
+          "command_all": "CMD [\"mongod\"]"
+        },
+        {
+          "type": "ADD",
+          "time": "2016-12-23T10:41:08Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 3643,
+          "size_human": "3.6 kB",
+          "params": "dir:1ddcee1a209bb883cc9287df451d26e0d1545e02e84c084ce01e3e2d32dceb42 in /tmp/scripts",
+          "command_snippet": "ADD dir:1ddcee1a209bb883cc9287df451d26e0d154...",
+          "command_all": "ADD dir:1ddcee1a209bb883cc9287df451d26e0d1545e02e84c084ce01e3e2d32dceb42 /tmp/scripts",
+          "target": "/tmp/scripts",
+          "source_type": "dir"
+        },
+        {
+          "type": "RUN",
+          "time": "2016-12-23T10:41:08Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 24,
+          "size_human": "24 B",
+          "command_snippet": "RUN mkdir -p /data/db-users && \\\n\techo \"dbpa...",
+          "command_all": "RUN mkdir -p /data/db-users && \\\n\techo \"dbpath = /data/db-users\" > /etc/mongodb.conf && \\\n\tchown -R mongodb:mongodb /data/db-users",
+          "system_commands": [
+            "mkdir -p /data/db-users",
+            "echo \"dbpath = /data/db-users\" > /etc/mongodb.conf",
+            "chown -R mongodb:mongodb /data/db-users"
+          ]
+        },
+        {
+          "type": "RUN",
+          "time": "2016-12-23T10:41:15Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 314865108,
+          "size_human": "315 MB",
+          "command_snippet": "RUN su - mongodb && \\\n\tmongod --fork --logpa...",
+          "command_all": "RUN su - mongodb && \\\n\tmongod --fork --logpath /var/log/mongodb.log --dbpath /data/db-users && \\\n\t/tmp/scripts/mongo_create_insert.sh && \\\n\tmongod --dbpath /data/db-users --shutdown && \\\n\tchown -R mongodb /data/db-users",
+          "system_commands": [
+            "su - mongodb",
+            "mongod --fork --logpath /var/log/mongodb.log --dbpath /data/db-users",
+            "/tmp/scripts/mongo_create_insert.sh",
+            "mongod --dbpath /data/db-users --shutdown",
+            "chown -R mongodb /data/db-users"
+          ]
+        },
+        {
+          "type": "VOLUME",
+          "time": "2016-12-23T10:41:17Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[/data/db-users]",
+          "command_snippet": "VOLUME [/data/db-users]",
+          "command_all": "VOLUME [/data/db-users]"
+        },
+        {
+          "type": "CMD",
+          "time": "2016-12-23T10:41:18Z",
+          "is_last_instruction": true,
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": true,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"mongod\",\"--config\",\"/etc/mongodb.conf\",\"--smallfiles\"]",
+          "command_snippet": "CMD [\"mongod\",\"--config\",\"/etc/mongodb.conf\"...",
+          "command_all": "CMD [\"mongod\",\"--config\",\"/etc/mongodb.conf\",\"--smallfiles\"]",
+          "raw_tags": [
+            "weaveworksdemos/user-db:0.4.0"
+          ]
+        }
+      ]
+    }
+  ]
+}

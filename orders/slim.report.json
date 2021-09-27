@@ -1,0 +1,359 @@
+{
+  "version": "1.0",
+  "engine": "linux|Transformer|1.36.4|8e0e0a59720bb95c708c046cf9ec71b4939803da|2021-09-07_08:07:15AM",
+  "containerized": false,
+  "host_distro": {
+    "name": "Ubuntu",
+    "version": "18.04",
+    "display_name": "Ubuntu 18.04.5 LTS"
+  },
+  "type": "build",
+  "state": "done",
+  "target_reference": "weaveworksdemos/orders:0.4.7",
+  "system": {
+    "type": "Linux",
+    "release": "4.15.0-156-generic",
+    "distro": {
+      "name": "Alpine Linux",
+      "version": "3.4.6",
+      "display_name": "Alpine Linux v3.4"
+    }
+  },
+  "source_image": {
+    "identity": {
+      "id": "sha256:8275c5b9181b2311feccd32f2efe865e9207a52a19e0f69939e5576c6f76dc1c",
+      "tags": [
+        "0.4.7"
+      ],
+      "names": [
+        "weaveworksdemos/orders:0.4.7"
+      ],
+      "digests": [
+        "sha256:b622e40e83433baf6374f15e076b53893f79958640fc6667dff597622eff03b9"
+      ],
+      "full_digests": [
+        "weaveworksdemos/orders@sha256:b622e40e83433baf6374f15e076b53893f79958640fc6667dff597622eff03b9"
+      ]
+    },
+    "size": 197650258,
+    "size_human": "198 MB",
+    "create_time": "2017-03-16T14:36:35Z",
+    "docker_version": "1.12.3",
+    "architecture": "amd64",
+    "user": "myuser",
+    "os": "linux",
+    "env_vars": [
+      "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1.8-openjdk/bin",
+      "LANG=C.UTF-8",
+      "JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk",
+      "JAVA_VERSION=8u111",
+      "JAVA_ALPINE_VERSION=8.111.14-r0",
+      "SERVICE_USER=myuser",
+      "SERVICE_UID=10001",
+      "SERVICE_GROUP=mygroup",
+      "SERVICE_GID=10001",
+      "JAVA_OPTS=-Djava.security.egd=file:/dev/urandom"
+    ],
+    "container_entry": {
+      "exe_path": ""
+    }
+  },
+  "minified_image_size": 117053418,
+  "minified_image_size_human": "117 MB",
+  "minified_image": "weaveworksdemos/orders.slim",
+  "minified_image_has_data": true,
+  "minified_by": 1.6885475142639577,
+  "artifact_location": "/tmp/docker-slim-state/.docker-slim-state/images/8275c5b9181b2311feccd32f2efe865e9207a52a19e0f69939e5576c6f76dc1c/artifacts",
+  "container_report_name": "creport.json",
+  "seccomp_profile_name": "weaveworksdemos-orders-seccomp.json",
+  "apparmor_profile_name": "weaveworksdemos-orders-apparmor-profile",
+  "image_stack": [
+    {
+      "is_top_image": true,
+      "id": "sha256:8275c5b9181b2311feccd32f2efe865e9207a52a19e0f69939e5576c6f76dc1c",
+      "full_name": "weaveworksdemos/orders:0.4.7",
+      "repo_name": "weaveworksdemos/orders",
+      "version_tag": "0.4.7",
+      "raw_tags": [
+        "weaveworksdemos/orders:0.4.7"
+      ],
+      "create_time": "2017-03-16T14:36:35Z",
+      "new_size": 197650258,
+      "new_size_human": "198 MB",
+      "instructions": [
+        {
+          "type": "ADD",
+          "time": "2016-12-27T18:17:13Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 4802964,
+          "size_human": "4.8 MB",
+          "params": "file:eeed5f514a35d18fcd9cbfe6c40c582211020bffdd53e4799018d33826fe5067 in /",
+          "command_snippet": "ADD file:eeed5f514a35d18fcd9cbfe6c40c5822110...",
+          "command_all": "ADD file:eeed5f514a35d18fcd9cbfe6c40c582211020bffdd53e4799018d33826fe5067 /",
+          "target": "/",
+          "source_type": "file"
+        },
+        {
+          "type": "ENV",
+          "time": "2016-12-27T18:37:54Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "LANG=C.UTF-8",
+          "command_snippet": "ENV LANG=C.UTF-8",
+          "command_all": "ENV LANG=C.UTF-8"
+        },
+        {
+          "type": "RUN",
+          "time": "2016-12-27T18:37:55Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 87,
+          "size_human": "87 B",
+          "command_snippet": "RUN { \t\techo '#!/bin/sh'; \t\techo 'set -e'; \t...",
+          "command_all": "RUN { \t\techo '#!/bin/sh'; \t\techo 'set -e'; \t\techo; \t\techo 'dirname \"$(dirname \"$(readlink -f \"$(which javac || which java)\")\")\"'; \t} > /usr/local/bin/docker-java-home && \\\n\tchmod +x /usr/local/bin/docker-java-home",
+          "system_commands": [
+            "{ echo '#!/bin/sh'; echo 'set -e'; echo; echo 'dirname \"$(dirname \"$(readlink -f \"$(which javac || which java)\")\")\"'; } > /usr/local/bin/docker-java-home",
+            "chmod +x /usr/local/bin/docker-java-home"
+          ]
+        },
+        {
+          "type": "ENV",
+          "time": "2016-12-27T18:38:35Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk",
+          "command_snippet": "ENV JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk",
+          "command_all": "ENV JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk"
+        },
+        {
+          "type": "ENV",
+          "time": "2016-12-27T18:38:36Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1.8-openjdk/bin",
+          "command_snippet": "ENV PATH=/usr/local/sbin:/usr/local/bin:/usr...",
+          "command_all": "ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1.8-openjdk/bin"
+        },
+        {
+          "type": "ENV",
+          "time": "2016-12-27T18:38:36Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "JAVA_VERSION=8u111",
+          "command_snippet": "ENV JAVA_VERSION=8u111",
+          "command_all": "ENV JAVA_VERSION=8u111"
+        },
+        {
+          "type": "ENV",
+          "time": "2016-12-27T18:38:37Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "JAVA_ALPINE_VERSION=8.111.14-r0",
+          "command_snippet": "ENV JAVA_ALPINE_VERSION=8.111.14-r0",
+          "command_all": "ENV JAVA_ALPINE_VERSION=8.111.14-r0"
+        },
+        {
+          "type": "RUN",
+          "time": "2016-12-27T18:38:42Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 140214250,
+          "size_human": "140 MB",
+          "command_snippet": "RUN set -x && \\\n\tapk add --no-cache \t\topenjd...",
+          "command_all": "RUN set -x && \\\n\tapk add --no-cache \t\topenjdk8=\"$JAVA_ALPINE_VERSION\" && \\\n\t[ \"$JAVA_HOME\" = \"$(docker-java-home)\" ]",
+          "system_commands": [
+            "set -x",
+            "apk add --no-cache openjdk8=\"$JAVA_ALPINE_VERSION\"",
+            "[ \"$JAVA_HOME\" = \"$(docker-java-home)\" ]"
+          ]
+        },
+        {
+          "type": "ENV",
+          "time": "2017-03-03T13:18:06Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "SERVICE_USER=myuser SERVICE_UID=10001 SERVICE_GROUP=mygroup SERVICE_GID=10001",
+          "command_snippet": "ENV SERVICE_USER=myuser SERVICE_UID=10001 SE...",
+          "command_all": "ENV SERVICE_USER=myuser SERVICE_UID=10001 SERVICE_GROUP=mygroup SERVICE_GID=10001"
+        },
+        {
+          "type": "RUN",
+          "time": "2017-03-03T13:18:07Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 922075,
+          "size_human": "922 kB",
+          "command_snippet": "RUN addgroup -g ${SERVICE_GID} ${SERVICE_GRO...",
+          "command_all": "RUN addgroup -g ${SERVICE_GID} ${SERVICE_GROUP} && \\\n\tadduser -g \"${SERVICE_NAME} user\" -D -H -G ${SERVICE_GROUP} -s /sbin/nologin -u ${SERVICE_UID} ${SERVICE_USER} && \\\n\tapk add --update libcap && \\\n\tmkdir /lib64 && \\\n\tln -s /usr/lib/jvm/java-1.8-openjdk/jre/lib/amd64/server/libjvm.so /lib/libjvm.so && \\\n\tln -s /usr/lib/jvm/java-1.8-openjdk/lib/amd64/jli/libjli.so /lib/libjli.so && \\\n\tsetcap 'cap_net_bind_service=+ep' $(readlink -f $(which java))",
+          "system_commands": [
+            "addgroup -g ${SERVICE_GID} ${SERVICE_GROUP}",
+            "adduser -g \"${SERVICE_NAME} user\" -D -H -G ${SERVICE_GROUP} -s /sbin/nologin -u ${SERVICE_UID} ${SERVICE_USER}",
+            "apk add --update libcap",
+            "mkdir /lib64",
+            "ln -s /usr/lib/jvm/java-1.8-openjdk/jre/lib/amd64/server/libjvm.so /lib/libjvm.so",
+            "ln -s /usr/lib/jvm/java-1.8-openjdk/lib/amd64/jli/libjli.so /lib/libjli.so",
+            "setcap 'cap_net_bind_service=+ep' $(readlink -f $(which java))"
+          ]
+        },
+        {
+          "type": "COPY",
+          "time": "2017-03-03T13:18:07Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 29,
+          "size_human": "29 B",
+          "params": "file:791a724c5a7efd4243653d2d4989517f5777b06eb0e7c4a462deb753476b86d0 in /usr/local/bin/java.sh",
+          "command_snippet": "COPY file:791a724c5a7efd4243653d2d4989517f57...",
+          "command_all": "COPY file:791a724c5a7efd4243653d2d4989517f5777b06eb0e7c4a462deb753476b86d0 /usr/local/bin/java.sh",
+          "target": "/usr/local/bin/java.sh",
+          "source_type": "file"
+        },
+        {
+          "type": "RUN",
+          "time": "2017-03-03T13:18:08Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 29,
+          "size_human": "29 B",
+          "command_snippet": "RUN chmod +x /usr/local/bin/java.sh",
+          "command_all": "RUN chmod +x /usr/local/bin/java.sh",
+          "system_commands": [
+            "chmod +x /usr/local/bin/java.sh"
+          ]
+        },
+        {
+          "type": "ARG",
+          "time": "2017-03-03T13:18:08Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "BUILD_DATE",
+          "command_snippet": "ARG BUILD_DATE",
+          "command_all": "ARG BUILD_DATE"
+        },
+        {
+          "type": "ARG",
+          "time": "2017-03-03T13:18:08Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "BUILD_VERSION",
+          "command_snippet": "ARG BUILD_VERSION",
+          "command_all": "ARG BUILD_VERSION"
+        },
+        {
+          "type": "ARG",
+          "time": "2017-03-03T13:18:08Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "COMMIT",
+          "command_snippet": "ARG COMMIT",
+          "command_all": "ARG COMMIT"
+        },
+        {
+          "type": "WORKDIR",
+          "time": "2017-03-16T14:36:33Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "/usr/src/app",
+          "command_snippet": "WORKDIR /usr/src/app",
+          "command_all": "WORKDIR /usr/src/app",
+          "system_commands": [
+            "mkdir -p /usr/src/app"
+          ]
+        },
+        {
+          "type": "COPY",
+          "time": "2017-03-16T14:36:34Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 25855412,
+          "size_human": "26 MB",
+          "params": "file:b7f5e7d70774e4a5c9cf259fa707c2ef0ccb12b9d6917f3e881c2dd8d8f80157 in ./app.jar",
+          "command_snippet": "COPY file:b7f5e7d70774e4a5c9cf259fa707c2ef0c...",
+          "command_all": "COPY file:b7f5e7d70774e4a5c9cf259fa707c2ef0ccb12b9d6917f3e881c2dd8d8f80157 ./app.jar",
+          "target": "./app.jar",
+          "source_type": "file"
+        },
+        {
+          "type": "RUN",
+          "time": "2017-03-16T14:36:35Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 25855412,
+          "size_human": "26 MB",
+          "command_snippet": "RUN chown -R ${SERVICE_USER}:${SERVICE_GROUP...",
+          "command_all": "RUN chown -R ${SERVICE_USER}:${SERVICE_GROUP} ./app.jar",
+          "system_commands": [
+            "chown -R ${SERVICE_USER}:${SERVICE_GROUP} ./app.jar"
+          ]
+        },
+        {
+          "type": "USER",
+          "time": "2017-03-16T14:36:35Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[myuser]",
+          "command_snippet": "USER [myuser]",
+          "command_all": "USER [myuser]"
+        },
+        {
+          "type": "ENV",
+          "time": "2017-03-16T14:36:35Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "JAVA_OPTS=-Djava.security.egd=file:/dev/urandom",
+          "command_snippet": "ENV JAVA_OPTS=-Djava.security.egd=file:/dev/...",
+          "command_all": "ENV JAVA_OPTS=-Djava.security.egd=file:/dev/urandom"
+        },
+        {
+          "type": "ENTRYPOINT",
+          "time": "2017-03-16T14:36:35Z",
+          "is_last_instruction": true,
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": true,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"/usr/local/bin/java.sh\",\"-jar\",\"./app.jar\",\"--port=80\"]",
+          "command_snippet": "ENTRYPOINT [\"/usr/local/bin/java.sh\",\"-jar\",...",
+          "command_all": "ENTRYPOINT [\"/usr/local/bin/java.sh\",\"-jar\",\"./app.jar\",\"--port=80\"]",
+          "raw_tags": [
+            "weaveworksdemos/orders:0.4.7"
+          ]
+        }
+      ]
+    }
+  ]
+}
